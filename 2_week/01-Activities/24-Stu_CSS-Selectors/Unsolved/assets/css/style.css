@@ -70,6 +70,24 @@ footer {
 
 /* TODO: Add code here to select all <a> elements that link to a file with a `.css` extension */
 
+/* Section: initially added class to be sure it worked */
+/* .icon::after {
+  content: '📝';
+} */
+
+/* changed to attribute selector */
+/* Links with "css" anywhere in the URL,
+   regardless of capitalization */
+   
+   a[href*="css" i]:after {
+    content: '📝';
+  }
+
+  /* "*" represents one occurance of value with string */
+  /* "i" represents/compares value case insensitive */
+  
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors */
+
 @media screen and (max-width: 768px) {
   header {
     flex-direction: column;
