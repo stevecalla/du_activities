@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style_original.css">
+</head>
+<body>
+  <header>
+    <h1>Bessie the Dog Fan Page</h1>
+    <nav>
+      <ul>
+        <audio
+          id="player"
+          src="./assets/images/mixkit-happy-puppy-barks-741.wav"
+          autoplay>
+            Your browser does not support the <code>audio</code> element.
+        </audio>
+        <li onclick="document.getElementById('player').play()">📢 <a href="#">BARKING</a></li>
+        <li>📽 <a href="#dog-video">VIDEO</a></li>
+        <li>🗞 <a href="#signup-form">NEWSLETTER</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="boxes box-border">
+      <h2>Meet Bessie</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis voluptatibus, perferendis hic at eius cum. Ipsam culpa labore aliquam exercitationem quasi. Soluta tenetur et quae explicabo quas placeat, aliquid nulla?</p>
+    </section>
+    <section class="img-box">
+      <figure>
+        <figcaption>Bessie playing in the grass</figcaption>
+        <img src="./assets/images/bessie_the_dog.JPG" alt="Bessie the dog" loading="lazy">
+      </figure>
+
+      <figure>
+        <figcaption>Bessie in the snow</figcaption>
+        <img src="./assets/images/bessie_the_dog2.jpg" alt="Bessie the dog" loading="lazy">
+      </figure>
+
+      <figure>
+        <figcaption>Bessie is a Colorado girl</figcaption>
+        <img src="./assets/images/bessie_the_dog5.jpg" alt="Bessie the dog" loading="lazy">
+      </figure>
+      <figure>
+        <figcaption>Bessie digging in the snow</figcaption>
+        <img src="./assets/images/bessie_the_dog3.jpg" alt="Bessie the dog" loading="lazy">
+      </figure>
+      <figure>
+        <figcaption>Bessie on a hike with Sydney</figcaption>
+        <img src="./assets/images/bessie_the_dog4.jpg" alt="Bessie the dog" loading="lazy">
+      </figure>
+      <figure>
+        <figcaption>Video of Bessie chasing the ball</figcaption>
+        <video id="dog-video" width="400" controls Autoplay=autoplay loading="lazy" alt="Bessie the dog">
+          <source src="./assets/images/IMG_4500.mp4" type="video/mp4">
+        </video>
+      </figure>
+    </section>
+    <form id="signup-form">
+      <p>Signup for Bessie's Newsletter</p>
+      <ul>
+        <label for="example">Name: </label>
+        <input id="name" type="text" name="contact_name" placeholder="first last">
+      </ul>
+      <ul>
+        <label for="example">Email: </label>
+        <input id="email" type="text" name="contact_email" placeholder="bessiethedog@gmail.com">
+      </ul>
+      <ul>
+        <label for="example">Message: </label>
+        <textarea id="msg" type="text" name="contact_message" placeholder="Bark bark bark all day long."></textarea>
+      </ul>
+      <ul class="">
+        <label for=""></label>
+        <input id='sendData' type="submit" value="Send">
+      </ul>
+    </form>
+  </main>
+  <footer>
+    <p>Bessie the Dog Productions ©</p>
+  </footer>
+  <script  type="text/javascript" src="./app_original.js"></script>
+</body>
+</html>

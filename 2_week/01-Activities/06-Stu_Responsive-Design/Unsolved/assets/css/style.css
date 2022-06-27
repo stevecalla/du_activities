@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+header {
+  padding: 40px;
+  text-align: center;
+  background: #13293d;
+  color: #fff;
+}
+
+/* 
+What happens when we set the display property to flex? 
+TODO: Write your answer here - Alingment for nav changes from block to flex which aligns the nav elements in a row 
+*/
+nav {
+  display: flex;
+  background-color: #d8a47f;
+}
+
+nav a {
+  color: #13293d;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* 
+What is the flex-wrap property? 
+TODO: Write your answer here - Flex wrap allows the child elements of the main element to wrap to the next line as necessary based on the size of the screen
+*/
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+aside {
+  /* The aside size is based on the content with plus padding of 80px. Flex grows the aside size based on the required space for the content plus the padding times the flex 1 grow parameter... so a 2 would be 2 times the required space for the content plus the padding. */
+  flex: 1;
+  background-color: #b9c6ae;
+  padding: 80px;
+  text-align: center;
+}
+
+
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #13293d;
+  color: #fff;
+}
+
+/* 
+What does the justify-content property do? 
+TODO: Write your answer here - justify content centers the product class containers.
+*/
+.products {
+  display: flex;
+  flex: 4;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #fff;
+  padding: 20px;
+}
+
+/* 
+What is the flex property a shorthand property for?
+What is it doing here? 
+TODO: Write your answer here - Flex is shorthand for grow (1st number), shrink (2nd number) and basis (third number). On line 81 flex is maintaining the grow and shrink at 0 which is the default size and setting the width at 400px.
+*/
+.card {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  padding: 10px;
+  flex: 0 0 400px;
+}
+
+.card header {
+  padding: 20px;
+}
+
+.card p {
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+}
+
+/* 
+What does the flex-direction property define?
+What is it doing here? 
+TODO: Write your answer here - flex direction is changing the layout from the default of row alignment to columns so that these items stack the main elements from top to bottom with the aside above the product elements rather than side to side.
+*/
+@media screen and (max-width: 768px) {
+  main,
+  nav {
+    flex-direction: column;
+  }
+}

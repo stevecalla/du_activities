@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Resets</title>
+  <link rel="stylesheet" href="./assets/css/reset.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+  <header>
+    <h1>The CSS Blog</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Resources</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <article>
+        <h2>Building Responsive Layouts</h2>
+        <div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil natus recusandae amet nostrum odit, ut unde non sint, quia sed inventore odio, delectus iure! Eligendi vitae fuga blanditiis accusamus tempore!</p>
+          <ul>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
+            <li>Nihil natus recusandae amet nostrum odit</li>
+            <li>Eligendi vitae fuga blanditiis accusamus tempore</li>
+          </ul>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil natus recusandae amet nostrum odit, ut unde non sint, quia sed inventore odio, delectus iure! Eligendi vitae fuga blanditiis accusamus tempore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, nisi, saepe quas sint consequuntur esse voluptatum, dolores dolor aspernatur neque laborum dolorum dolorem repudiandae. Dignissimos eveniet sequi corporis tempore ullam!</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil natus recusandae amet nostrum odit, ut unde non sint, quia sed inventore odio, delectus iure! Eligendi vitae fuga blanditiis accusamus tempore!</p>
+        </div>
+        <!-- <div class="resources"> -->
+        <div>
+          <!-- TODO: Add resource links -->
+          <!-- section: added links -->
+          <h2 class="resources">Show Resources</h2>
+          <!-- <h2>Show Resources</h2> -->
+          <ul class="color hide">
+            <li>
+              <!-- <p>box 1</p> -->
+              <a data-display="display" href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design" title="MDN web docs on responsive design" target="_blank">MDN web docs on responsive design</a>
+            </li>
+            <li>
+              <!-- <p>box 2</p> -->
+              <a data-display="display" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries" title="MDN web docs on using media queries" target="_blank">MDN web docs on using media queries"</a>
+            </li>
+            <li>
+              <!-- <p>box 3</p> -->
+              <a data-display="display" href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox" title="MDN web docs on flexbox" target="_blank">MDN web docs on flexbox</a>
+            </li>
+          </ul>
+        </div>
+      </article>
+    </section>
+    <aside>
+      <h2>Sign up to Learn More!</h2>
+      <form>
+        <input type="text" placeholder="E-mail address" />
+        <button>Submit</button>
+      </form>
+    </aside>
+  </main>
+
+  <!-- <script>
+    document.querySelector('.resources').addEventListener('mouseover', function (event) {
+      document.querySelector('.color').classList.remove('hide');
+      setInterval(() => {
+        document.querySelector('.color').classList.add('hide');
+      }, 10000);
+    })
+  </script> -->
+
+  <footer>
+    <span>Thanks for visiting!</span>
+  </footer>
+</body>
+
+</html>
+
+<!-- // document.querySelector('.resources').addEventListener('mouseout', function (event) {
+  //   event.target.style.color = 'black';
+  //   document.querySelector('.color').classList.add('hide');
+  // }) -->

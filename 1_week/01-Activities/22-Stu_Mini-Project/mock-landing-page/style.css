@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  overflow: hidden;
+}
+
+/* ---------- HEADER & FOOTERFORMATING ------------ */
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 16vh;
+  width: 100vw;
+  position: absolute;
+}
+
+/* ---------- HEADER & FOOTERFORMATING ------------ */
+section {
+  display: flex;
+  justify-content: center;
+  height: 8vh;
+  width: 100%;
+  margin-right: 20px;
+}
+
+section div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1px;
+  height: 50px;
+  width: 200px;
+  text-align: center;
+}
+
+.search-text {
+  height: 28px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  text-align: center;
+}
+
+/*-------- MAIN CONTAINER FORMATING -----------*/
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 85vh;
+  top: 16vh;
+  overflow: scroll;
+  position: relative;
+}
+
+img,
+video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.container > .normal {
+  flex: 1 1 150px;
+}
+
+.container > .big {
+  flex: 1 1 350px;
+}
+
+.container > .wide1 {
+  flex: 1 1 450px;
+}
+
+.container > .wide2 {
+  flex: 1 1 600px;
+}
+
+.container > .video {
+  flex: 1 1 400px;
+}
+
+.title-location {
+  /* position: absolute; */
+  position: sticky;
+  /* z-index: 5; */
+  top: 0;
+  height: 3vh;
+  width: 100%;
+  padding: 3px;
+  font: italic smaller sans-serif;
+  text-align: center;
+  background-color: #222;
+  color: #fff;
+  opacity: 0.75;
+}
+
+.photo-container {
+  position: relative;
+  top: 0;
+}

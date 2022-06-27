@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <audio
+        id="player"
+        src="./assets/images/mixkit-happy-puppy-barks-741.wav"
+        autoplay
+      >
+        Your browser does not support the <code>audio</code> element.
+      </audio>
+      <h1 onclick="document.getElementById('player').play()">
+        Bessie the Dog 📢
+      </h1>
+      <section>
+        <div>
+          <label for="name">Search Photo Caption</label>
+          <input
+            class="search-text"
+            id="searchText"
+            type="text"
+            id="name"
+            name="name"
+            required
+            minlength="4"
+            maxlength="8"
+            size="10"
+            placeholder="type search text"
+          />
+        </div>
+      </section>
+    </header>
+    <div class="container"></div>
+
+    <script type="text/javascript" src="./images.js"></script>
+    <script type="text/javascript" src="./app.js"></script>
+  </body>
+</html>
+
+<!-- SOURCE: -->
+<!-- https://scrimba.com/learn/flexbox/bonus-creating-a-flexbox-image-grid-flexbox-tutorial-cG8WGsQ -->

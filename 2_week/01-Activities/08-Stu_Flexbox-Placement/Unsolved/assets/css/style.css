@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: flex-start;
+}
+
+header {
+  padding: 40px;
+  text-align: center;
+  background: #13293d;
+  color: #fff;
+}
+
+nav {
+  display: flex;
+  /* section: added justify content flex end to move to the righ */
+  justify-content: flex-end;
+  background-color: #d8a47f;
+}
+
+nav a {
+  color: #13293d;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #13293d;
+  color: #fff;
+  margin-top: auto;
+}
+
+.product {
+  display: flex;
+  width: 90%;
+  margin: 1% auto;
+  /* section: added align items flex start to align photo with the top of the description */
+  align-items: flex-start;
+}
+
+
+.product-slideshow {
+  display: flex;
+  /* section: added align items center */
+  align-items: center;
+}
+
+.product button {
+  /* section: add button hight to 45px or fit content*/
+  /* height: 45px; */
+  height: fit-content;
+  font-size: 150%;
+}
+
+.product-image {
+  width: 100%;
+}
+
+.product-details {
+  margin-left: 3%;
+  flex: 0 0 60%;
+}
+
+@media screen and (max-width: 768px) {
+  main,
+  nav,
+  .product {
+    flex-direction: column;
+  }
+
+  .product-slideshow button {
+    /* Removes the slideshow buttons from the document flow */
+    display: none;
+  }
+
+  .product-details {
+    margin-left: 0;
+  }
+}

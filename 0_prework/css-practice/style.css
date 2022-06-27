@@ -1,0 +1,72 @@
+
+    body {
+      background-color: whitesmoke
+    }
+
+    html {
+      margin: 35px;
+    }
+
+    .content_container {
+      overflow: scroll;
+      position:relative;
+      height: 90vh;
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+      background-color: white;
+      box-shadow: 0.3em 0.3em 1em rgba(0,0,0,0.3);
+    }
+    
+    h1 {
+      text-align: center;
+    }
+
+    .red_1 {
+      color: red;
+    }
+
+    .blue_1 {
+      color: blue;
+    }
+
+    .green_1 {
+      color: green;
+    }
+
+    .orange_1 {
+      color: orange;
+    }
+
+    .big {
+      font-size: 24px;
+    }
+
+    .small {
+      font-size: 10px;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .bold {
+      font-weight: bold;
+    }
+
+    .font-family {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    #styledImage {
+      border: thick solid orange;
+      background-color: lightblue;
+    }
+
+    #styledImage {
+      width: 560px;
+      height: 315px;
+      padding: 10px;
+      border: thick solid orange;
+      background-color: lightblue;
+  }

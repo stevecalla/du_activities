@@ -1,0 +1,249 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  overflow: hidden;
+}
+
+/* ---------- HEADER & FOOTERFORMATING ------------ */
+header {
+  height: 10vh;
+  padding-top: 8px;
+}
+
+h1,
+h2 {
+  text-align: center;
+  /* padding-bottom: 5px; */
+}
+
+h2 {
+  color: blue;
+}
+
+section p {
+  padding: 3px 8px;
+  color: blue;
+}
+
+nav {
+  display: flex;
+  justify-content: end;
+  /* margin-bottom: 2px; */
+  padding-right: 8px;
+}
+
+nav li {
+  display: inline-block;
+  border: 1px solid black;
+  padding: 2px;
+}
+
+footer {
+  height: 5vh;
+  width: 100%;
+  margin-top: 1vh;
+  padding-right: 5px;
+  text-align: right;
+}
+
+/*-------- MAIN CONTAINER FORMATING -----------*/
+.container {
+  height: 85vh;
+  overflow: scroll;
+  position: relative;
+}
+
+.boxes {
+  height: 15vh;
+  width: 60vw;
+  min-width: 310px;
+}
+
+.box-border {
+  border: 2px solid #CCC;
+  overflow: scroll;
+}
+
+.img-box {
+  border: 2px solid #CCC;
+}
+
+.img-box,
+img,
+video {
+  height: 70vh;
+  width: 60vw;
+  object-fit: cover;
+}
+
+figcaption {
+  background-color: #222;
+  opacity: .75;
+  color: #fff;
+  font: italic smaller sans-serif;
+  padding: 3px;
+  text-align: center;
+  position: sticky; 
+  top: 0px; 
+}
+
+/* ----------- DISPLAY SCROLL BAR FOR IMG -------- */
+.img-box {
+  overflow-y: auto;
+}
+
+.img-box::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.img-box::-webkit-scrollbar:vertical {
+  width: 11px;
+}
+
+.img-box:-webkit-scrollbar:horizontal {
+  height: 11px;
+}
+
+.img-box::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  border: 1px solid white;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+/* ------------ CONTACT FORM FORMATING --------- */
+form {
+  /* Center contact form as the right aside using absolute, top, right */
+  position: absolute;
+  top: 0;
+  right: 0vh;
+  height: 85vh;
+  width: 40vw;
+  /* Form outline */
+  padding: 1em;
+  border: 2px solid #CCC;
+}
+
+form p {
+  text-align: center;
+  font-weight: bold;
+  color: black;
+  text-decoration: underline;
+}
+
+form ul,
+form p {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 1em;
+  margin: 3vw;
+}
+
+label {
+  /* Uniform size & alignment */
+  display: inline-block;
+  width: 90px;
+  /* text-align: right; */
+  padding-bottom: 5px;
+}
+
+input,
+textarea {
+  /* To make sure that all text fields have the same font settings
+     By default, textareas have a monospace font */
+  font: 1em sans-serif;
+  border: 2px solid #999;
+  height: 40px;
+  border-radius: 5px;
+  padding-left: 5px;
+  /* Uniform text field size */
+  width: 300px;
+}
+
+textarea {
+  /* Align multiline text fields with their labels */
+  vertical-align: top;
+  /* Provide space to type some text */
+  height: 10em;
+  resize: none;
+}
+
+.send-message {
+  /* Align buttons with the text fields */
+  padding-left: 90px; /* same size as the label elements */
+}
+
+/*------- MEDIA QUERIES -----------------*/
+@media screen and (max-width: 900px) {
+
+  header {
+    min-width: 400px;
+    height: 12vh;
+  }
+
+  h1 {
+    font-size: 25px;
+    padding-bottom: 8px;
+  }
+
+  h2 {
+    padding-bottom: 0px;
+  }
+
+  h2,
+  div p {
+    padding-top: 0px;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    font-size: 14px;
+    overflow: hidden;
+  }
+
+  .boxes {
+    width: 100%;
+  }
+  
+  form {
+    position: relative;
+    padding-left: 8vw;
+  }
+
+  .img-box, 
+  img, 
+  form,
+  video {
+    width: 100%;
+  }
+
+/* ----------- DO NOT DISPLAY SCROLL BAR FOR IMG BOX -------- */
+  .img-box::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
+
+  .img-box::-webkit-scrollbar:vertical {
+    width: 0px;
+  }
+
+  .img-box:-webkit-scrollbar:horizontal {
+    height: 0px;
+  }
+
+}
+
