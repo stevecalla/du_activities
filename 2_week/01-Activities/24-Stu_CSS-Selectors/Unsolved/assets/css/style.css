@@ -79,11 +79,16 @@ footer {
 /* Links with "css" anywhere in the URL,
    regardless of capitalization */
    
-   a[href*="css" i]:after {
+  /* a[href*="css" i]::after {
+    content: '📝';
+  } */
+
+  a[href$=".css" i]::after {
     content: '📝';
   }
 
   /* "*" represents one occurance of value with string */
+  /* rather than "*" use a "$" for href ending in .css, also use ".css" while the code above identifies every instance */
   /* "i" represents/compares value case insensitive */
   
   /* https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors */
