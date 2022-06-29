@@ -23,9 +23,13 @@ function sayGoodbye() {
 
 //This will throw an error
 var sayGoodbyeAgain = function () { 
+  console.log('goodbye not available');
   console.log(goodbye);
   return;
 };
+
+sayGoodbye();
+// sayGoodbyeAgain();
 
 // Shadowing happens when the same variable is used in the local and global scope
 var shadow = "Hello";
@@ -43,6 +47,5 @@ var sayWhatAgain = function () {
   console.log(shadow);   
 };
 
-sayGoodbye();
 sayWhat();
 sayWhatAgain();
