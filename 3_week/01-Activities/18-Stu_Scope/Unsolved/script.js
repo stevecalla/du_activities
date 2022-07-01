@@ -15,7 +15,6 @@ justShout();
 shoutItAllOut();
 
 // TODO: Declare variable 'animal' with the value 'Tigers' so it is only available to the 'sayTigers' function
-
 function sayLions() {
   var animal = "Lions"; 
   console.log(animal);

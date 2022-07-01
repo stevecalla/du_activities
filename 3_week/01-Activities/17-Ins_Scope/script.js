@@ -32,6 +32,8 @@ sayGoodbye();
 // sayGoodbyeAgain();
 
 // Shadowing happens when the same variable is used in the local and global scope
+// bad programming practice; rather reassign the variable or create a differently named variable
+
 var shadow = "Hello";
  console.log(shadow);
 

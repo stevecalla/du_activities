@@ -13,3 +13,4 @@ console.log(`Total number of students = ${students.length}.`)
 for (let i = 0; i < students.length; i++) {
   console.log(`Great to see you, ${students[i].charAt(0).toUpperCase()}${students[i].slice(1)}!`)
 }
+

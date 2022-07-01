@@ -16,7 +16,7 @@ isEqual(10, 10);
 // Refer to sample functions as needed!
 
 // TODO: Call the isEqual function so that it logs "They are equal in value"
-isEqual("5",5);
+isEqual("10",10);
 
 // TODO: Rewrite isEqual as a function expression called 'isEqualTakeTwo`
 let isEqualTakeTwo = function(x, y) {

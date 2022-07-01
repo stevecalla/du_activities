@@ -1,4 +1,5 @@
 // WRITE YOUR CODE HERE
+// TODO: As an instructor, I want to create a list of student names and be able to add and rename names.
 const studentNames = ['john', 'bob', 'sally', 'sarah', 'jennifer'];
 
 // TODO It's done when the total number of elements in the array is logged to the console.
@@ -24,6 +25,9 @@ studentNames[0] = 'bart';
 let currentStudentName = studentNames[0];
 console.log('Updated array = ', studentNames);
 
+console.log('');
+console.log('--------------------')
+// TODO It's done when, after an if statement confirms that the first element in the array has been replaced, the message "REPLACED_NAME is in class" is logged.
 if (priorStudentName === currentStudentName) {
   console.log(`${priorStudentName} === ${currentStudentName}`)
   console.log(`${currentStudentName} is still in class`);
@@ -31,10 +35,8 @@ if (priorStudentName === currentStudentName) {
   console.log(`${priorStudentName} !== ${currentStudentName}`);
   console.log(`${currentStudentName} replaced ${priorStudentName} in class`);
 }
-console.log('');
-console.log('--------------------')
 
-// TODO It's done when, after an if statement confirms that the first element in the array has been replaced, the message "REPLACED_NAME is in class" is logged.
+// playing around
 console.log('');
 console.log('--------------------')
 

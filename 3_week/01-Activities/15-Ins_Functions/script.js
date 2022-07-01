@@ -32,3 +32,5 @@ function declareHelloAgain(x,y,z) {
 // Function arguments give parameters their values
 // Here the parameter x is given the value 7 when the function is called
 declareHelloAgain(7, "Hello", true);
+
+
