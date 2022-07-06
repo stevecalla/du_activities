@@ -10,9 +10,9 @@ var shelter = {
   }
 };
 
-let requestedPets = ["Lulu", "Mackie", "Annie"]; //calla added to make this into a loop rather than one at a time
+let requestedPets = ["Lulu", "Mackie", "Annie"]; //section: calla added to make this into a loop rather than one at a time
 
-for (let i = 0; i < requestedPets.length; i++) { //calla added to make this into a loop rather than one at a time
+for (let i = 0; i < requestedPets.length; i++) { //section: calla added to make this into a loop rather than one at a time
   let chosenPet;
   // console.log(requestedPets[i]);
   chosenPet = requestedPets[i];
@@ -23,23 +23,23 @@ for (let i = 0; i < requestedPets.length; i++) { //calla added to make this into
 
 //Debug the code below 
 function dogMessage(chosenPet) {
-   console.log("Congrats! " + chosenPet + ", a great dog, is available for adoption!"); //Calla - modifid from chosenPet.Lulu  to chosenPet
-   shelter.apptMessage(); //added shelter
+   console.log("Congrats! " + chosenPet + ", a great dog, is available for adoption!"); //section: Calla - modifid from chosenPet.Lulu  to chosenPet
+   shelter.apptMessage(); //section: added shelter
 }
 
 function catMessage(chosenPet) {
   console.log("Congrats! " + chosenPet + ", an awesome cat, is available for adoption!");
-  shelter.apptMessage(); //added () to execute function
+  shelter.apptMessage(); //section: added () to execute function
 }
 
-function checkPetAvailability(chosenPet) { //calla added to make this into a loop rather than one at a time
-  if (shelter.dogs.includes(chosenPet)) { //added the object name "shelter" to fixed 1st error
+function checkPetAvailability(chosenPet) { //section: calla added to make this into a loop rather than one at a time
+  if (shelter.dogs.includes(chosenPet)) { //section: added the object name "shelter" to fix 1st error
     dogMessage(chosenPet);
-  } else if (shelter.cats.includes(chosenPet)) { //added the object name "shelter" to fixed 1st error
+  } else if (shelter.cats.includes(chosenPet)) { //section: added the object name "shelter" to fixed 1st error
     catMessage(chosenPet);
   } else {
-    console.log("It looks like the pet is not available.");
-    console.log("Check out our featured dog, " + shelter.dogs[0] + ". or our featured cat, " + shelter.cats[1]); //replaced cat.shelter with shelter.cats[1] and shelter[0] with shelter.dogs[0]
+    console.log(`It looks like the pet, ${chosenPet}, is not available.`);
+    console.log("Check out our featured dog, " + shelter.dogs[0] + ". Or, our featured cat, " + shelter.cats[1]); //section: replaced cat.shelter with shelter.cats[1] and shelter[0] with shelter.dogs[0]
   }
 }
 

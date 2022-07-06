@@ -8,10 +8,10 @@
 // todo It's done when the customerOrder object has three properties that store the drink's name, the number of sugars, and a Boolean indicating whether the order is ready.
 
 const customerOrder = {
-  customerName: 'Joan',
+  productOrdered: 'Black Coffee',
   numberOfSugars: 2,
   isOrderReady: true,
-  productOrdered: 'Black Coffee',
+  customerName: 'Joan',
   productNumber: 1,
   price: 3.99,
   salesTax: 1.00,
@@ -20,8 +20,8 @@ const customerOrder = {
 
 console.log(customerOrder);
 
-
 // todo It's done when the drink name and the number of sugars is logged to the console.
+
 console.log('Drink Ordered = ', customerOrder.productOrdered, ', Number of sugars = ', customerOrder.numberOfSugars);
 
 // todo It's done when, if the order is ready, the message "Ready for pick-up" logs.
