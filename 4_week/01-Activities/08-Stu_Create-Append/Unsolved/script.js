@@ -20,11 +20,11 @@ favoriteEl.textContent = "My favorite foods are:";
 
 body.appendChild(h1El);
 body.appendChild(infoEl);
+body.appendChild(favoriteEl);
 infoEl.appendChild(imgEl);
 infoEl.appendChild(kittenEl);
 infoEl.appendChild(nameEl);
-body.appendChild(favoriteEl);
-favoriteEl.appendChild(listEl);
+// favoriteEl.appendChild(listEl); //section duplicate of line 29
 // Append ordered list 
 favoriteEl.appendChild(listEl);
 
@@ -36,3 +36,45 @@ kittenEl.setAttribute("style", "font-size:25px; text-align:center;");
 favoriteEl.setAttribute("style", "font-size:20px;");
 
 // TODO: Add ordered list items containing four favorite foods
+// It's done when an ordered list containing four favorite foods is visible in the HTML below the text "My favorite foods are:"
+
+//section: create text for the list items
+li1.textContent = 'Apple 🍎 🍏';
+li2.textContent = 'Pizza 🍕';
+li3.textContent = 'Dumpling 🥟';
+li4.textContent = 'Cupcakes 🧁 🌸';
+
+//section append list items to the ordered list element
+listEl.appendChild(li1);
+listEl.appendChild(li2);
+listEl.appendChild(li3);
+listEl.appendChild(li4);
+
+// It's done when the ordered list has a background color of #333333 and padding of 20px.
+
+// listEl.style.backgroundColor = '#333333';
+// listEl.style.padding = '20px';
+
+listEl.setAttribute('style', "background-color:#333333; padding:20px")
+
+// It's done when each list item has a font color of white, padding of 5px, and margin-left of 35px.
+
+document.querySelectorAll('li').forEach(element => {
+  element.style.color = 'white';
+  element.style.padding = '5px';
+  element.style.marginLeft = '35px';
+});
+
+// It's done when each list item has a different background color.
+
+// document.querySelectorAll('li').forEach(element => {
+//   element.style.color = 'white';
+//   element.style.backgroundColor = 'lightgrey'; 
+//   element.style.padding = '5px';
+//   element.style.marginLeft = '35px';
+// });
+
+li1.style.backgroundColor = 'red';
+li2.style.backgroundColor = 'blue';
+li3.style.backgroundColor = 'orange';
+li4.style.backgroundColor = 'green';
