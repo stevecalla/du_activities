@@ -7,6 +7,19 @@ function setCounterText() {
   countEl.textContent = count;
 }
 
+// As a developer, I want to increment or decrement a count when a user clicks on a button.
+
 // TODO: Add event listener to increment button
+// It's done when a user clicks on the increment button and the count is increased by 1.
+incrementEl.addEventListener('click', function() {
+  let incrementCount = count++;
+  setCounterText(incrementCount)
+})
 
 // TODO: Add event listener to decrement button 
+// It's done when a user clicks on the decrement button and, if the count is greater than 0, the count is decreased by 1.
+decrementEl.addEventListener('click', function() {
+  let decrementCount = count--;
+  setCounterText(decrementCount)
+})
+

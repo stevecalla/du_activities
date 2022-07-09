@@ -28,18 +28,24 @@ console.log(eleH4, eleH4.length);
 // It's done when the text of each <h4> is set to blue, the font size is 30px, and the text is bold.
 // for (let i = 0; i < eleH4.length; i++) {
 //   eleH4[i].style.color = "blue";
+//   eleH4[i].style.fontSize = '30px';
+//   eleH4[i].style.fontWeight = 'bold';
 // }
 
 // eleH4.forEach(element => element.style.color = 'blue');
 
 // It's done when the padding to the left of the title is set to 10px and the margin is set to 0.
 // for (let i = 0; i < eleH4.length; i++) {
-//   eleH4[i].style.padding = "10px";
+//   eleH4[i].style.paddingLeft = "10px";
+//   eleH4[i].style.margin = '0px';
 // }
 
 // eleH4.forEach(element => element.style.padding = "10px");
 
 eleH4.forEach(element => {
   element.style.color = 'blue';
-  element.style.padding = '10px';
+  element.style.fontSize = '30px';
+  element.style.fontWeight = 'bold';
+  element.style.paddingLeft = '10px';
+  element.style.margin = '0px';
 })
