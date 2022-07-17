@@ -13,7 +13,7 @@ var images = [
   "https://picsum.photos/300/203"
 ];
 
-carousel.style.backgroundImage = "url('https://picsum.photos/300/200')";
+// carousel.style.backgroundImage = "url('https://picsum.photos/300/200')";
 
 function navigate(direction) {
   console.log('1= ', index, direction)
@@ -34,7 +34,10 @@ function navigate(direction) {
 carousel.addEventListener("click", function(event) {
   console.log(event.target)
   // window.location.href = "https://google.com";
+  console.log(window.location.href);
   window.location.href = images[index]; //section:this event listener is waiting for a click on the img in the carousel box; when the box is clicked it is setting the href equal to the images array at the index variable
+
+  console.log(window.location.href);
 });
 
 // TODO: Describe the functionality of the following event listener.

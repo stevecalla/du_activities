@@ -6,6 +6,11 @@
   --light: #fffaf7;
 }
 
+body {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 16px;
+}
+
 ::selection {
   color: var(--brown);
   background-color: var(--light);

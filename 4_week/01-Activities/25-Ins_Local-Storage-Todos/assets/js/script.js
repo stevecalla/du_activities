@@ -12,12 +12,12 @@ function saveLastGrade() {
     comment: comment.value.trim()
   };
   // Use .setItem() to store object in storage and JSON.stringify to convert it as a string
-  localStorage.setItem("studentGrade", JSON.stringify(studentGrade));
+  localStorage.setItem("studentGrade", JSON.stringify(studentGrade)); //section
 }
 
 function renderLastGrade() {
   // Use JSON.parse() to convert text to JavaScript object
-  var lastGrade = JSON.parse(localStorage.getItem("studentGrade"));
+  var lastGrade = JSON.parse(localStorage.getItem("studentGrade")); //section
   // Check if data is returned, if not exit out of the function
   if (lastGrade !== null) {
   document.getElementById("saved-name").innerHTML = lastGrade.student;

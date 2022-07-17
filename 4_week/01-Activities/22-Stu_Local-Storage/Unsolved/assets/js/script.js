@@ -43,7 +43,7 @@ signUpButton.addEventListener("click", function(event) {
     'password': password
   }
 
-  localStorage.setItem('user', {'email': email, 'password': password});
+  // localStorage.setItem('user', {'email': email, 'password': password});
 
   // Put the object into storage
   localStorage.setItem('user', JSON.stringify(user));

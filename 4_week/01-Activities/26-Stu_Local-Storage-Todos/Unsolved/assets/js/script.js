@@ -12,6 +12,7 @@ function renderTodos() {
   todoCountSpan.textContent = todos.length; //displays the length of the todos array
   
   // TODO: Describe the functionality of the following `for` loop.
+  console.log(todos, todos.length)
   for (var i = 0; i < todos.length; i++) { //populates the todos array on the screen
     var todo = todos[i];
 
@@ -27,7 +28,7 @@ function renderTodos() {
   }
 }
 
-// TODO: What is the purpose of the following function? //retrieves todos from local storate
+// TODO: What is the purpose of the following function? //retrieves todos from local storage
 function init() {
   // TODO: What is the purpose of the following line of code?
   var storedTodos = JSON.parse(localStorage.getItem("todos"));
@@ -36,10 +37,11 @@ function init() {
     todos = storedTodos;
   }
   // TODO: Describe the purpose of the following line of code.
+  console.log(todos)
   renderTodos();
 }
 
-function storeTodos() 
+function storeTodos() {
   // TODO: Describe the purpose of the following line of code. //stores the todos list in local storage as stringified object
   localStorage.setItem("todos", JSON.stringify(todos));
 }
@@ -48,7 +50,7 @@ function storeTodos()
 todoForm.addEventListener("submit", function(event) {
   event.preventDefault();
   var todoText = todoInput.value.trim();
-  // TODO: Describe the functionality of the following `if` statement. //if todo is blank exit the function (validation)
+  // TODO: Describe the functionality of the following `if` statement. //validation: if todoText is blank exit the function (validation)
   if (todoText === "") {
     return;
   }

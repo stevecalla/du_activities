@@ -28,11 +28,12 @@ let eventType = document.getElementById('status');
 //section:event listeners go here 👇
 document.addEventListener('keydown', keyInformation);
 document.addEventListener('keyup', keyInformation);
+// document.addEventListener('keypress', keyInformation);
 
 //section:functions and event handlers go here 👇
 function keyInformation(event) {
   console.log(event)
-  console.log(event.key, event.code, event.keyCode);
+  console.log(event.key, event.code, event.keyCode, event.type);
   keyValue.innerText = event.key.toUpperCase();
   keyCode.innerText = event.keyCode;
   eventType.innerText = event.type;

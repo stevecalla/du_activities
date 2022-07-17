@@ -12,13 +12,15 @@ var typeface;
 
 // Change event
 typefaceEl.addEventListener('change', function (event) {
-  event.preventDefault();
+  // event.preventDefault();
   typeface = typefaceEl.value;
   document.querySelector('.container').style.fontFamily = typeface;
 });
 
 // Keydown event
 textAreaEl.addEventListener('keydown', function (event) {
+  console.log(event);
+  event.preventDefault();
   // Access value of pressed key with key property
   var key = event.key.toLowerCase();
   var alphabetNumericCharacters = 'abcdefghijklmnopqrstuvwxyz0123456789'.split(
@@ -32,7 +34,7 @@ textAreaEl.addEventListener('keydown', function (event) {
 });
 
 clearEl.addEventListener('click', function (event) {
-  event.preventDefault();
+  // event.preventDefault();
   textAreaEl.value = '';
 
   for (var i = 0; i < elements.length; i++) {

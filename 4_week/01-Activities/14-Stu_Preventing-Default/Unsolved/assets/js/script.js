@@ -12,9 +12,9 @@ function calculateTotal(total, tipAmount) {
 }
 
 function addTip(event) {
-  console.log(event.cancelable);
-  event.preventDefault(); //section added event prevent default
-  event.stopPropagation();
+  console.log(event.cancelable);//section:testing
+  event.preventDefault(); //section:added event prevent default
+  event.stopPropagation(); //section:testing; doesn't do anything
   var tipPercentage = tipEl.value * .01;
   var total = totalEl.value;
   var tipAmount = calculateTip(total, tipPercentage);

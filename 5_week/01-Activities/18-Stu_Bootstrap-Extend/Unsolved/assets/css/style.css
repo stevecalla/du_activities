@@ -1,3 +1,7 @@
+* {
+  /* border: 2px solid red; */
+}
+
 :root {
   --brown: #a88f82;
   --tan: #f5e1d5;
@@ -8,3 +12,38 @@
 
 /* Add your custom class style definitions here */
 /* HINT: Apply CSS variables using `var(--brown)` syntax as your property value */
+
+.custom-navbar {
+  background-color: var(--teal);
+}
+
+.custom-navbar a {
+  color: var(--lightteal);
+}
+
+.custom-navbar a:hover {
+  color: var(--tan);
+}
+
+.custom-jumbotron {
+  background-color: var(--lightteal);
+  color: var(--teal);
+}
+
+.custom-btn {
+  background-color: var(--brown);
+  color: var(--light);
+}
+
+.custom-card {
+  border: .75px solid var(--teal);
+}
+
+.custom-card-header {
+  background-color: var(--teal);
+  color: var(--light);
+}
+
+.custom-text {
+  color: var(--brown);
+}

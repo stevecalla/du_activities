@@ -12,14 +12,16 @@ function setCounterText() {
 // TODO: Add event listener to increment button
 // It's done when a user clicks on the increment button and the count is increased by 1.
 incrementEl.addEventListener('click', function() {
-  let incrementCount = count++;
-  setCounterText(incrementCount)
+  count++;
+  setCounterText()
 })
 
 // TODO: Add event listener to decrement button 
 // It's done when a user clicks on the decrement button and, if the count is greater than 0, the count is decreased by 1.
 decrementEl.addEventListener('click', function() {
-  let decrementCount = count--;
-  setCounterText(decrementCount)
+  if (count > 0) {
+    count--;
+  }
+  setCounterText()
 })
 

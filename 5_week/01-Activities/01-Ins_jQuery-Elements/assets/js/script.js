@@ -34,28 +34,32 @@ var abilities = [
   'much more',
 ];
 
-for (var i = 0; i < abilities.length; i++) {
-  // Create a new `<div>` for each ability and its text content
-  var abilityEl = $('<li>');
+// for (var i = 0; i < abilities.length; i++) {
+//   // Create a new `<div>` for each ability and its text content
+//   var abilityEl = $('<li>');
 
-  // abilityEl.textContent = abilities[i];
-  abilityEl.text(abilities[i]);
+//   // abilityEl.textContent = abilities[i];
+//   abilityEl.text(abilities[i]);
 
-  // `my-3` class adds margin on top and bottom
-  abilityEl.addClass('my-3');
+//   // `my-3` class adds margin on top and bottom
+//   abilityEl.addClass('my-3');
 
-  // Alternatively
-  // var abilityEl = $("<div>" + abilities[i] + "</div>");
+//   // Alternatively
+//   // var abilityEl = $("<div>" + abilities[i] + "</div>");
 
-  // Add this new `<div>` to the abilities `<div>` container element.
-  rootEl.append(abilityEl);
-}
+//   // Add this new `<div>` to the abilities `<div>` container element.
+//   rootEl.append(abilityEl);
+// }
 
 // select all `<div>` elements on the page
-// document.querySelectorAll('div');
+document.querySelectorAll('div');
 console.log($('div'));
 
+var abilityEl = $('<li>');
+abilityEl.addClass('my-3');
 // Alternatively use the `$.each` method
-// $.each(abilities, function(i, ability) {
-//    abilityEl.append("<div>" + ability + "</div>");
-// })
+$.each(abilities, function(i, ability) {
+  console.log(ability)
+   abilityEl.append("<li>" + ability + "</li>");
+   rootEl.append(abilityEl);
+})

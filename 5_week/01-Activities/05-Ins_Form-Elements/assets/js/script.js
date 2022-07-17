@@ -18,8 +18,9 @@ function handleFormSubmit(event) {
   var selected = [];
 
   // Loop through checked options to store in array
-  $.each(checkedEl, function () {
+  $.each(checkedEl, function (index) {
     selected.push($(this).val());
+    selected.push(index);
   });
   console.log('Toppings: ', selected.join(', '));
 

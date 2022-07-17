@@ -19,5 +19,12 @@ signUpButton.addEventListener("click", function(event) {
 
   // TODO: Set new submission to local storage 
   localStorage.setItem('user', JSON.stringify(user));
+
+  localStorage.setItem('firstName', user.firstName);
+  localStorage.setItem('lastName', user.lastName);
+  localStorage.setItem('email', user.Email);
+  localStorage.setItem('password', user.password);
+
+  // localStorage.setItem('firstName2', JSON.stringify(user.firstName));
   
 });
