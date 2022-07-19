@@ -29,8 +29,64 @@ var handleFormSubmit = function (event) {
 
 formEl.on('submit', handleFormSubmit);
 
-// Add Autocomplete widget here
-//
-
 // Add Datepicker widget here
-//
+
+  $( function() {
+    $( "#datepicker" ).datepicker({
+      changeMonth: true,
+      changeYear: true
+    });
+  } );
+
+  // $( function() {
+  //   $( "#datepicker" ).datepicker();
+  // } );
+
+  // Add Autocomplete widget here
+
+    $( function() {
+      var availableTags = [
+        "ActionScript",
+        "AppleScript",
+        "Asp",
+        "BASIC",
+        "C",
+        "C++",
+        "Clojure",
+        "COBOL",
+        "ColdFusion",
+        "Erlang",
+        "Fortran",
+        "Groovy",
+        "Haskell",
+        "Java",
+        "JavaScript",
+        "Lisp",
+        "Perl",
+        "PHP",
+        "Python",
+        "Ruby",
+        "Scala",
+        "Scheme"
+      ];
+      // $( "#tags" ).autocomplete({
+      $( "#skill-name" ).autocomplete({
+        source: availableTags
+      });
+
+      availableTags.forEach(element => {
+        // // vanilla js
+        // let skills = document.createElement('li'); //create lemenet
+        // skillsListEl.append(skills); //append content
+        // skills.textContent = element; //insert content
+        
+        
+        // jQuery
+        // let skills = $('<li>'); //create element
+        // skillsListEl.append(skills); //append element
+        // skills.text(element); //insert content
+
+
+        // console.log(element)
+      })
+    });

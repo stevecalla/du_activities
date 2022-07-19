@@ -65,4 +65,8 @@ $(function () {
 });
 
 // Add interaction here
+  $(function() {
+    // $( "#sortable" ).sortable();
+    $( "#skills-list" ).sortable();
+  } );
 //
