@@ -6,6 +6,7 @@ var getRepoName = function () {
   // Where is this value coming from?
   // TODO: Write your answer here
   var queryString = document.location.search;
+  console.log(queryString)
   var repoName = queryString.split('=')[1];
 
   if (repoName) {
@@ -29,6 +30,7 @@ var getRepoIssues = function (repo) {
 
         // What is this checking for? Under what condition will this be `true`?
         // TODO: Write your answer here
+        console.log(response.headers)
         if (response.headers.get('Link')) {
           displayWarning(repo);
         }
@@ -41,8 +43,11 @@ var getRepoIssues = function (repo) {
 
 var displayIssues = function (issues) {
   // Is there a difference between this and `!issues.length`?
+  console.log(issues.length === 0);
+  console.log.(!issues.length);
   // TODO: Write your answer here
   if (issues.length === 0) {
+  // if (!issues.length) { //could be undefined
     issueContainerEl.textContent = 'This repo has no open issues!';
     return;
   }

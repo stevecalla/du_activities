@@ -4,6 +4,7 @@ var fetchButton = document.getElementById('fetch-button');
 function getApi() {
   // fetch request gets a list of all the repos for the node.js organization
   var requestUrl = 'https://api.github.com/orgs/nodejs/repos';
+  var returnData = [];
 
   fetch(requestUrl)
     .then(function (response) {
@@ -17,6 +18,8 @@ function getApi() {
         var createTableRow = document.createElement('tr');
         var tableData = document.createElement('td');
         var link = document.createElement('a');
+        returnData = data;
+        console.log(returnData)
 
         // Setting the text of link and the href of the link
         link.textContent = data[i].html_url;
@@ -29,6 +32,7 @@ function getApi() {
         tableBody.appendChild(createTableRow);
       }
     });
+
 }
 
 fetchButton.addEventListener('click', getApi);

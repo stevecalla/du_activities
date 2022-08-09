@@ -6,6 +6,8 @@ function getApi(requestUrl) {
   fetch(requestUrl)
     .then(function (response) {
       console.log(response);
+      // console.log(response.text());
+      console.log(response.status);
       if (response.status === 200) {
         responseText.textContent = response.status;
       }

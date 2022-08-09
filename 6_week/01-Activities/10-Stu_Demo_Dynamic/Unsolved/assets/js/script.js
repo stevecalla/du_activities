@@ -12,6 +12,13 @@ function getApi() {
       // Use the console to examine the response
       console.log(data);
       // TODO: Loop through the data and generate your HTML
+      userContainer.textContent = "";
+      data.forEach((user, index) => {
+        let listItem = document.createElement('li');
+        userContainer.append(listItem);
+        listItem.textContent = `User: ${user.login}, URL: ${user.url}`;
+        console.log(user.login, user.url);
+      })
     });
 }
 fetchButton.addEventListener('click', getApi);

@@ -25,6 +25,12 @@
   color: var(--tan);
 }
 
+.. {
+  color: red;
+  fill: red;
+  background-color: black;
+}
+
 .custom-jumbotron {
   background-color: var(--lightteal);
   color: var(--teal);

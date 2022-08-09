@@ -1,4 +1,6 @@
 var requestUrl = 'https://api.github.com/orgs/Netflix/repos';
+// var requestUrl = 'http://www.muskfoundation.org/';
+// var requestUrl = 'http://www.google.com/';
 
 // JQuery AJAX
 // TODO: Comment on how AJAX returns an API call

@@ -1,5 +1,6 @@
 // TODO: Edit the URL to get only 5 issues of Twitter's Chill repo
-var requestUrl = 'https://api.github.com/repos/{owner}/{repo}/issues';
+// var requestUrl = 'https://api.github.com/repos/{owner}/{repo}/issues';
+var requestUrl = 'https://api.github.com/repos/twitter/chill/issues';
 
 fetch(requestUrl)
   .then(function (response) {
@@ -7,7 +8,11 @@ fetch(requestUrl)
   })
   .then(function (data) {
     console.log('Github Repo Issues \n----------');
-    console.log(data);
+    // console.log(data);
     // TODO: Loop through the response
-    // TODO: Console log each issue's URL and each user's login
-  });
+    for (let i = 0; i < 5; i++) {
+      // TODO: Console log each issue's URL and each user's login
+      console.log(`${i + 1}: `, 'URL = ', data[i].url, 'LOGIN = ', data[i].user.login);
+      console.log('-------------');
+    });
+    }
