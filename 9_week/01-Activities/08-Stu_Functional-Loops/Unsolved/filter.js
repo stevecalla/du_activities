@@ -9,8 +9,8 @@ const evenNumbers = originalArray.filter(function(data) {
   }
 });
 
-console.log(evenNumbers);
-console.log(originalArray);
+console.log('even # = ', evenNumbers);
+console.log('original array = ', originalArray);
 
 const isPrime = num => {
   // Set up a loop the starts with 2 and continues to increment i as long as i is less than 2
@@ -23,10 +23,15 @@ const isPrime = num => {
 };
 
 
-// TODO: Describe how filter is working in this example. What will the value of primeArray be? 
+// TODO: Describe how filter is working in this example. What will the value of primeArray be? //section: filter is checking the originalArray, filtering for prime and creating a new array called primeArray
 const primeArray = originalArray.filter(isPrime);
+
+console.log('prime array = ', primeArray); //section added this console.log
 
 
 // TODO: Describe how filter is working in this example. What will the value of moreThan5Array be? 
+//section: filter is looking checking for num > 5, then placing them in an array called moreThan5Array
 const moreThan5Array = originalArray.filter(num => num > 5);
+
+console.log('> 5 = ', moreThan5Array); //section add this console.log
 

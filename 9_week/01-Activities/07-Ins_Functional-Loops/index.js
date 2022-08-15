@@ -30,7 +30,7 @@ console.log(canWatchRatedR);
 
 const cardedMoviePatrons = moviePatrons.map(patron => {
   // Copy the object being iterated over
-  const pObj = { ...patron };
+  const pObj = { ...patron }; //section: creates a new array so that the original array is not changed
   // Do everything else the same
   if (pObj.age >= 17) {
     pObj.canWatchRatedR = true;
@@ -40,6 +40,19 @@ const cardedMoviePatrons = moviePatrons.map(patron => {
   // Be sure to return the new obj, not the parameter
   return pObj;
 });
+
+// const cardedMoviePatrons = moviePatrons.map(patron => { //section: test = changes the original array
+//   // Copy the object being iterated over
+//   // const pObj = { ...patron };
+//   // Do everything else the same
+//   if (patron.age >= 17) {
+//     patron.canWatchRatedR = true;
+//   } else {
+//     patron.canWatchRatedR = false;
+//   }
+//   // Be sure to return the new obj, not the parameter
+//   return patron;
+// });
 
 console.log("Movie Patrons: ")
 console.log(moviePatrons);

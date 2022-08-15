@@ -5,9 +5,10 @@ const nodejs = {
 };
 
 // TODO: Destructure the object 'nodejs'
+// const { pkgName, type } = nodejs;
 
-console.log(pkgName); // <= Node.js
-console.log(type); // <= JavaScript runtime environment
+// console.log(pkgName); // <= Node.js
+// console.log(type); // <= JavaScript runtime environment
 
 // 2. Nested Object
 const js = {
@@ -26,15 +27,20 @@ const js = {
   },
 };
 
-// TODO: Destructure the nested object 'js'
+// // TODO: Destructure the nested object 'js'
+const { tools: { frameworks : { framework1, framework2 } } } = js;
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
 
+// console.log(tools)
+// console.log(frameworks)
 console.log(framework1); // <= AngularJS
 console.log(framework2); // <= Vue.js
 
-// 3. Arrays
+// // 3. Arrays
 const languages = ['HTML', 'CSS', 'JavaScript'];
 
-// TODO: Destructure the array 'languages'
+// // TODO: Destructure the array 'languages'
+const [ markup, style, scripting ] = languages; //section: use [] for an array
 
 console.log(markup, style, scripting); // <= HTML CSS JavaScript
 console.log(markup); // <= HTML

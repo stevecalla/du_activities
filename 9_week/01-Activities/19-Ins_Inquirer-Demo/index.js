@@ -1,4 +1,6 @@
-const inquirer = require('inquirer');
+const inquirer = require('inquirer');  //original
+
+// const inquirer = require('inquirer');
 
 inquirer
   .prompt([

@@ -9,7 +9,7 @@ var funnyCase = (string) => {
 };
 
 // Prints `yOu cAn't jUsT Do wHaTeVeR YoU WaNt aLl tHe tImE!`
-console.log(funnyCase("You can't just do whatever you want all the time!"));
+console.log(funnyCase("#1 = ", "You can't just do whatever you want all the time!"));
 
 // --------------------------------------------------------------------------
 
@@ -30,7 +30,7 @@ var doubled = map(numbers, (element) => {
 });
 
 // Prints `[ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]`
-console.log(doubled);
+console.log("2 = ", doubled);
 
 // --------------------------------------------------------------------------
 
@@ -51,7 +51,7 @@ var evenNumbers = filter(numbers, (currentElement) => {
 });
 
 // Prints `[ 2, 4, 6, 8, 10 ]`
-console.log(evenNumbers);
+console.log("3 = ", evenNumbers);
 
 // --------------------------------------------------------------------------
 
@@ -63,14 +63,18 @@ var netflixQueue = {
     "Eternal Sunshine of the Spotless Mind",
     "Fight Club"
   ],
-  watchMovie: () => {
+  // watchMovie: () => {
+  watchMovie: function() { //section: changed to a function
     this.queue.pop();
   },
-  addMovie: (movie) => {
+  // addMovie: (movie) => {
+  addMovie: function(movie) { //section: changed to a function
     this.queue.unshift(movie);
   },
-  printQueue: () => {
+  // printQueue: () => { //todo changed from arrow function to normal function in line 73
+  printQueue: function() {  //section: changed to a function
     var list = "";
+    console.log(this.queue)
     for (var i = this.queue.length - 1; i >= 0; i--) {
       var currentMovie = this.queue[i];
       list += (this.queue.length - i) + ". " + currentMovie + "\n";
@@ -81,11 +85,15 @@ var netflixQueue = {
 
 console.log("Printing movie queue!\n");
 netflixQueue.printQueue();
+
 netflixQueue.watchMovie();
 console.log("\nWatched a movie!\n");
 console.log("Printing movie queue!\n");
+
 netflixQueue.printQueue();
 console.log("\nAdding a movie!\n");
+
 netflixQueue.addMovie("Black Swan");
 console.log("Printing movie queue!\n");
+
 netflixQueue.printQueue();
