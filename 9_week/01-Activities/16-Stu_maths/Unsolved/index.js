@@ -13,7 +13,10 @@ console.log(operation, numOne, numTwo);
 // and each `case` uses the corresponding `maths` method
 // to perform each math operation on the two numbers, `numOne` and `numTwo`
 
-switch (operation) {
+switch (operation || !numOne || !numTwo) {
+  case !numOne: 
+    console.log('Please enter a valid operation.');
+    break;
   case 'sum':
     console.log(`${numOne} + ${numTwo} = ${mathCalc.sum(numOne, numTwo)}.`);
     break;
@@ -27,6 +30,7 @@ switch (operation) {
     console.log(`${numOne} / ${numTwo} = ${mathCalc.quotient(numOne, numTwo)}.`);
     break;
   default:
+    console.log(operation, numOne, numTwo)
     console.log(`Sorry ${operation} is not available.`);
 }
 

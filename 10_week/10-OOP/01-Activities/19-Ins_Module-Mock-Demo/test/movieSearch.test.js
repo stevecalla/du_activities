@@ -26,6 +26,8 @@ describe("MovieSearch", () => {
         })
       );
 
+      // axios.get.mockResolvedValue({ data: {} });
+
       expect(movie.search(name)).resolves.toEqual({ data: {} });
       expect(axios.get).lastCalledWith(movie.buildUrl(name));
     });

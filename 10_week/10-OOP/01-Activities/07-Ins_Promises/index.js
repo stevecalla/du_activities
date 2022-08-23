@@ -2,6 +2,7 @@
 // The real-life promise in this scenario is a child asking his parents for a Nintendo Switch
 
 const choresDone = true;
+// const choresDone = false;
 
 // Promise
 const willGetSwitch = new Promise((resolve, reject) => {
@@ -24,9 +25,11 @@ const willGetSwitch = new Promise((resolve, reject) => {
 const playGames = (reward) => {
   const message = `I am playing games on my new ${reward.name}`;
   return Promise.resolve(message);
+  // return message;
 };
 
 willGetSwitch
   .then(playGames)
-  .then((resolved) => console.log(resolved))
+  .then((resolve) => console.log(resolve))
+  // .then((reject) => console.log(reject))
   .catch((err) => console.error(err));

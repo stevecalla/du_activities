@@ -14,20 +14,44 @@ if (!userInput) {
 const studentDistracted = userInput !== 'coding';
 
 // TODO: Refactor the following to use promises
-const practiceCoding = (cb, errCb) => {
-  if (studentDistracted) {
-    errCb({
-      issue: 'Distracted',
-      message: 'Coding stopped',
-    });
-  } else {
-    cb('We are coding!');
-  }
-};
+// const practiceCoding = (cb, errCb) => {
+//   if (studentDistracted) {
+//     errCb({
+//       issue: 'Distracted',
+//       message: 'Coding stopped',
+//     });
+//   } else {
+//     cb('We are coding!');
+//   }
+// };
 
-const callback = (message) => console.log(message);
-const errorCallback = (message) => console.log(message);
+const practiceCoding = new Promise((resolve, reject) => {
+  if (studentDistracted) {
+    // errCb({
+    //   issue: 'Distracted',
+    //   message: 'Coding stopped',
+    // });
+    const errorMsg = {
+        issue: 'Distracted',
+        message: 'Coding stopped',
+    };
+    reject(errorMsg);
+    // alternative
+    // reject(new Error("Promise rejected: Error: Coding stopped - Student is distracted")); //this will throw errors which is acceptable
+  } else {
+    resolve('We are coding in promises!')
+    // console.log('We are coding in promises!');
+  }
+})
+
+// const callback = (message) => console.log(message);
+// const errorCallback = (message) => console.log(message);
 
 // TODO: Refactor to call 'practiceCoding()' and chain a 'then()' to log "We are coding in promises!" in the console
 // TODO: Chain a 'catch()' to log "Promise rejected: " and the error
-practiceCoding(callback, errorCallback);
+// practiceCoding(callback, errorCallback);
+
+practiceCoding
+  .then((resolve) => console.log(resolve))
+  .catch((reject) => console.log(`Promise rejected: Error: ${reject.message} - Student is ${reject.issue}`))
+  // .catch((err) => console.log(err)); //if line 40 is used

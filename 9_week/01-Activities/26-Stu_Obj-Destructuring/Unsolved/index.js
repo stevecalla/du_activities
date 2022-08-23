@@ -29,6 +29,9 @@ const js = {
 
 // // TODO: Destructure the nested object 'js'
 const { tools: { frameworks : { framework1, framework2 } } } = js;
+// OR
+// const { framework1, framework2 } = js.tools.frameworks;
+
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
 
 // console.log(tools)

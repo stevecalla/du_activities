@@ -39,7 +39,7 @@ logCharacter(arya);
 
 // We can also use array destructuring to pull off an array's elements
 const locations = ['Winterfell', 'Casterly Rock', 'Kings Landing'];
-const [winterfell, casterlyRock, kingLanding] = locations;
+const [winterfell, casterlyRock, kingLanding, aaaa] = locations;
 
 console.log('7 = ', winterfell); // logs `"Winterfell"`
 console.log('8 = ', casterlyRock); // logs `"Casterly Rock"`

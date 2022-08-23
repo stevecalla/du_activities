@@ -1,5 +1,6 @@
 // Constructor function which can be used to create objects containing the properties "raining", "noise", and the "makeNoise()" function
-function Animal(raining, noise) {
+function Animal(type, raining, noise) {
+  this.type = type;
   this.raining = raining;
   this.noise = noise;
   this.makeNoise = () => {
@@ -10,16 +11,18 @@ function Animal(raining, noise) {
 }
 
 // Sets the variables "dogs" and "cats" to be animal objects and initializes them with raining and noise properties
-const dogs = new Animal(true, 'Woof!');
-const cats = new Animal(false, 'Meow!');
+const dogs = new Animal("dog", true, 'Woof!');
+console.log(dogs)
+const cats = new Animal("cat", false, 'Meow!');
+console.log(cats)
 
 // Calling dogs and cats makeNoise methods
 dogs.makeNoise();
 cats.makeNoise();
 
 // If we want, we can change an object's properties after they're created
-// cats.raining = true;
-// cats.makeNoise();
+cats.raining = true;
+cats.makeNoise();
 
 const massHysteria = (dogs, cats) => {
   if (dogs.raining === true && cats.raining === true) {

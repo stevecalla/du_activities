@@ -19,7 +19,13 @@ function Movie(title, releaseYear) {
 }
 
 const superman = new Movie('Superman', 1978);
+// superman.logInfo = function sayHI() {
+//   console.log('hi')
+// }
+// console.log(superman)
+// superman.logInfo();
 
+console.log(Movie)
 Movie.prototype.logInfo = function () {
   console.log(`${this.title} was released in ${this.releaseYear}`);
 };

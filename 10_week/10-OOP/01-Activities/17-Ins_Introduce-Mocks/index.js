@@ -13,3 +13,4 @@ log.green("You can look these up at https://en.wikipedia.org/wiki/ANSI_escape_co
 log.yellow("But they're just codes that represent different colors");
 
 log.cyan("The second argument console.log should receive is the message to be printed");
+

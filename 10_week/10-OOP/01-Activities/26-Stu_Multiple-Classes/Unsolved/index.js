@@ -2,6 +2,8 @@ const Store = require('./store');
 const { toys } = require('./toy');
 
 const store = new Store("Big Al's Toy Barn", toys);
+console.log('1 ', store);
+console.log('2 ', store.name, store.stock[0].name)
 
 store.welcome();
 store.processProductSale('Action Figure');
