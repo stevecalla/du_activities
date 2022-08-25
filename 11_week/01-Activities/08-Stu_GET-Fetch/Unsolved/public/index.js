@@ -1,13 +1,15 @@
 const petEl = document.getElementById('pets');
 const termButton = document.getElementById('term-btn');
 
+//section changed api/terms to api/pets
+//section changed POST to GET
+//section removed body
 const getPets = () =>
-  fetch('/api/terms', {
-    method: 'POST',
-    body: '',
+  fetch('/api/pets', {
+    method: 'GET'
   })
     .then((res) => res.json())
-    .then((data) => data);
+    .then((data) => data); 
 
 const renderPet = (pet) => {
   const cardEl = document.createElement('div');
@@ -29,7 +31,9 @@ const renderPet = (pet) => {
   petEl.appendChild(cardEl);
 };
 
-const buttonHandler = () =>
+const buttonHandler = () => {
+  console.log('button')
   getPets().then((response) => response.forEach((item) => renderPet(item)));
+}
 
 termButton.addEventListener('click', buttonHandler);

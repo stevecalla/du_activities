@@ -35,6 +35,7 @@ app.get('/api/term/:term', (req, res) => {
   // TODO: Add a comment describing the content of req.params in this instance
 
   const requestedTerm = req.params.term.toLowerCase();
+  console.log('1 = ', req.params); //section
 
   for (let i = 0; i < termData.length; i++) {
     if (requestedTerm === termData[i].term.toLowerCase()) {
@@ -50,6 +51,7 @@ app.get('/api/term/:term', (req, res) => {
 
 app.get('/api/terms/:category', (req, res) => {
   const requestedCategory = req.params.category.toLowerCase();
+  console.log('2 = ', req.params); //section
   const result = [];
 
   for (let i = 0; i < termData.length; i++) {

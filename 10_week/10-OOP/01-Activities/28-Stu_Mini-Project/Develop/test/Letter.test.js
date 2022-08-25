@@ -7,6 +7,7 @@ describe('Visibility', () => {
 
   it('Correct guess makes character visible', () => {
     const letter = new Letter('j');
+    // console.log(letter);
     const { visible } = letter;
 
     // Correct guess
@@ -40,9 +41,9 @@ describe('Visibility', () => {
 
     expect(letter.toString()).toBe('j');
   });
-});
+// });
 
-describe('Letter class', () => {
+// describe('Letter class', () => {
   it("Characters that aren't digits or letters are instantly visible", () => {
     expect(new Letter('?').visible).toBe(true);
   });

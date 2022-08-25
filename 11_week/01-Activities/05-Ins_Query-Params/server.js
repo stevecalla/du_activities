@@ -1,17 +1,18 @@
 const express = require('express');
 const termData = require('./terms.json');
 
-const PORT = 3001;
+const PORT = 6001;
 
 const app = express();
 
 // GET route to get all of the terms
-app.get('/api/terms', (req, res) => res.json(termData));
+app.get('/api/terms', (req, res) => res.json(termData)); //section because we defined the path in line 2, only need to define the dataset here
 
 // GET route that returns any specific term
 app.get('/api/terms/:term', (req, res) => {
   // Coerce the specific search term to lowercase
   const requestedTerm = req.params.term.toLowerCase();
+  console.log('1 = ', req.params)
 
   // Iterate through the terms name to check if it matches `req.params.term`
   for (let i = 0; i < termData.length; i++) {

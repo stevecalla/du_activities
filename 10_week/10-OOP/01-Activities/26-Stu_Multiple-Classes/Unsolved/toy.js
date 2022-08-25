@@ -11,11 +11,8 @@ const toys = [
   new Toy('Rare Toy', 17.99, 1),
 ];
 
-// let testToy = toys.map(element => element);
-
-// console.log(testToy)
-
 module.exports = {
   Toy,
   toys,
 };
+

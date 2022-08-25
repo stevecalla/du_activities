@@ -4,6 +4,7 @@ const Letter = require('../lib/Letter');
 describe('Word class', () => {
   it('Creates an array of Letter objects', () => {
     const word = new Word('hi');
+    // console.log(word.letters)
 
     expect(word.letters).toEqual(
       expect.arrayContaining([expect.objectContaining({ char: 'h' })])
@@ -29,6 +30,7 @@ describe('Word class', () => {
       word.guessLetter('i');
       expect(word.guessedCorrectly()).toBe(true);
     });
+
     it('returns false if at least one letter is incorrect', () => {
       const word = new Word('hi');
       word.guessLetter('h');

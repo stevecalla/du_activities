@@ -1,8 +1,7 @@
 const express = require('express');
 const path = require('path');
 const petData = require('./db/animals.json');
-
-const PORT = 3001;
+const PORT = 4001;
 
 const app = express();
 
