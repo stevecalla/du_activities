@@ -31,7 +31,7 @@ app.get('/api/terms/', (req, res) => {
 
 // TODO: Add a comment describing what this route will return
 
-app.get('/api/term/:term', (req, res) => {
+app.get('/api/terms/:term', (req, res) => {
   // TODO: Add a comment describing the content of req.params in this instance
 
   const requestedTerm = req.params.term.toLowerCase();

@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 
-const app = express(); //section added espress)()
+const app = express(); //section added espress()
 const PORT = 8001; //section changed from 3001 to 8001
 
 // TODO: Invoke app.use() and serve static files from the '/public' folder

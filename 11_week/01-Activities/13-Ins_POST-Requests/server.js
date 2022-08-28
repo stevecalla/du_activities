@@ -13,7 +13,7 @@ app.get('/api/reviews', (req, res) => {
   console.info(req.rawHeaders);
 
   // Log our request to the terminal
-  console.info(`${req.method} request received`);
+  console.info(`${req.method} ${req.hostname} ${req.cookies} ${req.ip} request received`);
 });
 
 // POST request

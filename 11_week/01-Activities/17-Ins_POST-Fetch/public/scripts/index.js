@@ -33,6 +33,8 @@ reviewForm.addEventListener('submit', (e) => {
     review: reviewInput.value.trim(),
   };
 
+  console.log(newReview);
+
   // Call our postReview method to make a POST request with our `newReview` object.
   postReview(newReview)
     .then((data) => alert(`Review added! Review ID: ${data.body.review_id}`))

@@ -4,8 +4,10 @@ const reviewInput = document.getElementById('review');
 const reviewForm = document.getElementById('review-form');
 
 // TODO: Add a comment explaining the functionality of this helper function
+//section the postReview function is sending the data/review to the database
 const postReview = (review) =>
   // TODO: Add a comment explaining what sort of data we need to provide when invoking the fetch function for a POST request
+  //section json
   fetch('/api/reviews', {
     method: 'POST',
     headers: {
@@ -20,6 +22,7 @@ const postReview = (review) =>
       return data;
     })
     // TODO: Add a comment describing the functionality of the catch statement
+    //section will catch and console log a post error message
     .catch((error) => {
       console.error('Error in POST request:', error);
     });

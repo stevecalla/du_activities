@@ -4,6 +4,8 @@ const fs = require('fs');
 // Helper method for generating unique ids
 const uuid = require('./helpers/uuid');
 
+const dataFile = require('./db/reviews2.json'); //section
+
 const PORT = 3001;
 
 const app = express();
@@ -43,12 +45,16 @@ app.post('/api/reviews', (req, res) => {
       username,
       review_id: uuid(),
     };
-
+  
+    //section add the newReview to the current data file
+    dataFile.push(newReview);
     // Convert the data to a string so we can save it
-    const reviewString = JSON.stringify(newReview);
+    //section use the updatedFile not only the newReview
+    const reviewString = JSON.stringify(dataFile);
+    // const reviewString = JSON.stringify(newReview);
 
     // Write the string to a file
-    fs.writeFile(`./db/reviews.json`, reviewString, (err) =>
+    fs.writeFile(`./db/reviews2.json`, reviewString, (err) =>
       err
         ? console.error(err)
         : console.log(
@@ -61,7 +67,7 @@ app.post('/api/reviews', (req, res) => {
       body: newReview,
     };
 
-    console.log(response);
+    console.log('4 = ', response);
     res.status(201).json(response);
   } else {
     res.status(500).json('Error in posting review');
@@ -71,3 +77,16 @@ app.post('/api/reviews', (req, res) => {
 app.listen(PORT, () =>
   console.log(`App listening at http://localhost:${PORT} 🚀`)
 );
+
+//DRAFT OF APPEND
+
+// fs.appendFile("./db/reviews2.json", reviewString, (err) => {
+//   if (err) {
+//     console.log(err);
+//   }
+//   else {
+//     // Get the file contents after the append operation
+//     console.log("\nFile Contents of file after append:",
+//       fs.readFileSync("./db/reviews2.json", "utf8"));
+//   }
+// });

@@ -25,6 +25,7 @@ app.post('/api/reviews', (req, res) => {
 
   // Prepare a response object to send back to the client
   let response;
+  console.log(req.body)
 
   // Check if there is anything in the response body
   if (req.body && req.body.product) {

@@ -13,9 +13,9 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static('public'));
 
-app.get('/', (req, res) =>
-  res.sendFile(path.join(__dirname, '/public/index.html'))
-);
+// app.get('/', (req, res) =>
+  // res.sendFile(path.join(__dirname, '/public/index.html'))
+// ); //section commented out to test express.static above
 
 // GET request for reviews
 app.get('/api/reviews', (req, res) => {

@@ -9,10 +9,13 @@ class Restaurant {
   }
 
   takeOrder(order) {
+    console.log('4 take order = ', order); //section
+    console.log('4a rest = ', restaurant); //section
     this.revenue += order.item.price;
     this.orders.push(order);
     console.log(`Added #${order.id} to the queue`);
     this.printRevenue();
+    console.log('5 rest = ', restaurant); //section
   }
 
   printRevenue() {
@@ -35,6 +38,7 @@ class Restaurant {
 }
 
 const restaurant = new Restaurant("McJared's");
+console.log(' 1 = ', restaurant); //section
 
 const items = [
   new Item("Burger", 5.99),

@@ -6,8 +6,10 @@ const reviews = require('./db/reviews');
 const app = express();
 
 // TODO: Implement middleware for the parsing of JSON data
+app.use(express.json());
 
 // TODO: Implement middleware for parsing of URL encoded data
+app.use(express.urlencoded({ extended: true }));
 
 // GET request for ALL reviews
 app.get('/api/reviews', (req, res) => {
@@ -60,10 +62,43 @@ app.post('/api/reviews', (req, res) => {
 });
 
 // POST request to upvote a review
-app.post('/api/upvotes/:review_id', (req, res) => {
-  if (req.body && req.params.review_id) {
+app.post('/api/upvotes/', (req, res) => {
+  // console.log(res.json(req.body)) //section
+  // USE curl --data "id=814e" http://localhost:3001/api/upvotes //section
+
+  if (req.body || req.params.review_id) {
     console.info(`${req.method} request received to upvote a review`);
-    const reviewId = req.params.review_id;
+    // const reviewId = req.params.review_id; //section
+
+    const reviewId = req.params.review_id || req.body.id; //section
+
+    console.log(req.body, req.body.id, req.params.review_id, reviewId) //section
+
+    for (let i = 0; i < reviews.length; i++) {
+      const currentReview = reviews[i];
+      if (currentReview.review_id === reviewId) {
+        currentReview.upvotes += 1;
+        res.status(200).json(`New upvote count is: ${currentReview.upvotes}!`);
+        return;
+      }
+    }
+    res.status(404).json('Review ID not found');
+  }
+});
+
+// POST request to upvote a review
+app.post('/api/upvotes/:review_id', (req, res) => {
+  // console.log(res.json(req.body)) //section
+  // USE curl --data "id=814e" http://localhost:3001/api/upvotes/814e //section
+
+  if (req.body || req.params.review_id) {
+    console.info(`${req.method} request received to upvote a review`);
+    // const reviewId = req.params.review_id; //section
+
+    const reviewId = req.params.review_id || req.body.id; //section
+
+    console.log(req.body, req.body.id, req.params.review_id, reviewId) //section
+
     for (let i = 0; i < reviews.length; i++) {
       const currentReview = reviews[i];
       if (currentReview.review_id === reviewId) {

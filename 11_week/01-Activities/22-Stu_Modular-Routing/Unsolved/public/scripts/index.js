@@ -33,6 +33,7 @@ const createCard = (tip) => {
 
 // Get a list of existing tips from the server
 const getTips = () =>
+  // fetch('api/tips', {
   fetch('api/tips', {
     method: 'GET', // or 'PUT'
     headers: {
