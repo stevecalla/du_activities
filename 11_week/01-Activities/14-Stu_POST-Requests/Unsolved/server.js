@@ -8,6 +8,8 @@ const app = express();
 app.get('/api/reviews', (req, res) => {
   // Your code here
   res.send(`${req.method} request received (hello)`);
+  console.log('get request');
+  console.info(`${req.rawHeaders} request received`);
   // res.json(`${req.method} request received (hello)`);
 });
 
@@ -15,7 +17,7 @@ app.get('/api/reviews', (req, res) => {
 // Your code here
 app.post('/api/reviews', (req, res) => {
   // Your code here
-  res.send(`${req.method} request received (hello)`);
+  res.send(`${req.method} request received (hello2)`);
   // res.json(`${req.method} request received (hello)`);
 });
 

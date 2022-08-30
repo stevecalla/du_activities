@@ -3,7 +3,7 @@ const express = require('express');
 const db = require('./db/repos.json'); //section
 
 
-// TODO: Create an `app` variable set to the value of `expressa()`
+// TODO: Create an `app` variable set to the value of `express()`
 const app = express(); //section
 const PORT = 3001; //section
 

@@ -4,7 +4,7 @@ const fs = require('fs');
 // Helper method for generating unique ids
 const uuid = require('./helpers/uuid');
 
-const dataFile = require('./db/reviews2.json'); //section
+const dataFile = require('./db/reviews2.json'); //section 
 
 const PORT = 3001;
 
@@ -50,7 +50,7 @@ app.post('/api/reviews', (req, res) => {
     dataFile.push(newReview);
     // Convert the data to a string so we can save it
     //section use the updatedFile not only the newReview
-    const reviewString = JSON.stringify(dataFile);
+    const reviewString = JSON.stringify(dataFile, null, 4);
     // const reviewString = JSON.stringify(newReview);
 
     // Write the string to a file

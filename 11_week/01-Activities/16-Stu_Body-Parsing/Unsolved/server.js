@@ -65,7 +65,7 @@ app.post('/api/reviews', (req, res) => {
 app.post('/api/upvotes/', (req, res) => {
   // console.log(res.json(req.body)) //section
   // USE curl --data "id=814e" http://localhost:3001/api/upvotes //section
-
+  // USE THUNDER CLIENT ET AL... PUT BODY AS "{"id":"1b9b"}"
   if (req.body || req.params.review_id) {
     console.info(`${req.method} request received to upvote a review`);
     // const reviewId = req.params.review_id; //section
