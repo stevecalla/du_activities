@@ -16,7 +16,7 @@ const middleware = (req, res, next) => {
 
 app.use(middleware);
 
-app.get('/', (req, res) => res.json(`GET route`));
+app.get('/', (req, res) => res.json(`it gets a route`));
 app.post('/', (req, res) => res.json(`POST route`));
 app.put('/:id', (req, res) => res.json(`PUT route`));
 app.delete('/:id', (req, res) => res.json(`DELETE route`));

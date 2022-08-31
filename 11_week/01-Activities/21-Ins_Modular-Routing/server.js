@@ -11,8 +11,8 @@ const PORT = 3001;
 const app = express();
 
 // Middleware for parsing JSON and urlencoded form data
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.json()); //section: json body ---> req.body.{key} = value
+app.use(express.urlencoded({ extended: true }));//section: querystring ?key=value&key2=value ==> req.query.{key}
 
 app.use(express.static('public'));
 

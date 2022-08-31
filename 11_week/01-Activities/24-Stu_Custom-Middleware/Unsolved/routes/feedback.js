@@ -6,10 +6,10 @@ const uuid = require('../helpers/uuid');
 //section
 // const middleware = (req, res, next) => {
 //   // ANSI escape code that instructs the terminal to print in yellow
-//   const yellow = '\x1b[33m%s\x1b[0m';
+//   const red = '\x1b[33m%s\x1b[0m';
 
 //   // Log out the request type and resource
-//   console.log(yellow, `${req.method} request to ${req.path} ${req.body}`);
+//   console.log(red, `${req.method} request to ${req.path} hello`);
 
 //   // Built-in express method to call the next middleware in the stack.
 //   next();

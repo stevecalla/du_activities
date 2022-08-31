@@ -3,18 +3,18 @@ const { readFromFile, readAndAppend } = require('../helpers/fsUtils');
 const uuid = require('../helpers/uuid');
 
 //section
-const middleware = (req, res, next) => {
-  // ANSI escape code that instructs the terminal to print in yellow
-  const yellow = '\x1b[33m%s\x1b[0m';
+// const middleware = (req, res, next) => {
+//   // ANSI escape code that instructs the terminal to print in yellow
+//   const yellow = '\x1b[33m%s\x1b[0m';
 
-  // Log out the request type and resource
-  console.log(yellow, `\n${req.method} request to ${req.path} hello`);
+//   // Log out the request type and resource
+//   console.log(yellow, `\n 1 ${req.method} request to ${req.path} hello`);
 
-  // Built-in express method to call the next middleware in the stack.
-  next();
-};
+//   // Built-in express method to call the next middleware in the stack.
+//   next();
+// };
 
-tips.use(middleware);
+// tips.use(middleware);
 
 //section
 

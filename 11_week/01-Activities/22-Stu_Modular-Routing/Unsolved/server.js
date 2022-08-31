@@ -3,8 +3,9 @@ const path = require('path');
 const fs = require('fs');
 const util = require('util');
 // const { readFromFile, readAndAppend } = require('./helpers/fsUtils'); //section
-const tipsRouter = require("./routes/tipsRouter"); //section
-const feedbackRouter = require("./routes/feedbackRouter"); //section
+// const tipsRouter = require("./routes/tipsRouter"); //section
+// const feedbackRouter = require("./routes/feedbackRouter"); //section
+const api = require("./routes/index"); //section
 
 // Helper method for generating unique ids
 const uuid = require('./helpers/uuid');
@@ -17,8 +18,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use("/api/tips", tipsRouter); //section
-app.use("/api/feedback", feedbackRouter); //section
+app.use("/api", api); //section
 
 app.use(express.static('public'));
 
