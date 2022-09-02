@@ -5,3 +5,8 @@ VALUES ("Elliot", "Smith", false),
        ("Verónica", "Rodriguez", false),
        ("Igor", "Stein", true);
        
+
+SHOW DATABASES;
+SHOW TABLES;
+DESCRIBE students;
+SELECT * FROM students;

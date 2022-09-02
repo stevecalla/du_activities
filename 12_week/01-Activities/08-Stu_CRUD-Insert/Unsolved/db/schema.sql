@@ -8,3 +8,7 @@ CREATE TABLE biographies (
   name VARCHAR(100) NOT NULL
 );
 
+SHOW DATABASES;
+SHOW TABLES;
+DESCRIBE biographies;
+SELECT * FROM books_db;

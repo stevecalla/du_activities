@@ -5,6 +5,7 @@ CREATE DATABASE inventory_db;
 
 -- use inventory_db database --
 USE inventory_db;
+SHOW DATABASES;
 
 -- Creates the table "produce" within inventory_db --
 CREATE TABLE produce (
@@ -13,3 +14,6 @@ CREATE TABLE produce (
   -- Makes a string column called "name" which cannot contain null --
   name VARCHAR(30) NOT NULL
 );
+
+SHOW TABLES;
+DESCRIBE produce;

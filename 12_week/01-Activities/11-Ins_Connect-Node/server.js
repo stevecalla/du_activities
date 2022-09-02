@@ -16,7 +16,7 @@ const db = mysql.createConnection(
     // MySQL username,
     user: 'root',
     // MySQL password
-    password: '',
+    password: 'denverdenver',
     database: 'classlist_db'
   },
   console.log(`Connected to the classlist_db database.`)
@@ -24,7 +24,9 @@ const db = mysql.createConnection(
 
 // Query database
 db.query('SELECT * FROM students', function (err, results) {
+// db.query('SELECT * FROM students WHERE last_name = "Smith"', function (err, results) {
   console.log(results);
+  // results.forEach(element => console.log(element.first_name)); //section
 });
 
 // Default response for any other request (Not Found)

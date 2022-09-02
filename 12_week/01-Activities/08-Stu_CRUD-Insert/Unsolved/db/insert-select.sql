@@ -5,3 +5,8 @@ VALUES
     ( 003, "Long Walk to Freedom");
 
 SELECT * FROM biographies;
+
+SHOW DATABASES;
+SHOW TABLES;
+DESCRIBE biographies;
+SELECT * FROM biographies;

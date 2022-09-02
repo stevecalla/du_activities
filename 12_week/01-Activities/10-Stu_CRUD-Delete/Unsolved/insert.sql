@@ -1,5 +1,10 @@
 INSERT INTO fiction (id, name)
 VALUES
-    ( 001, "To Kill a Mockingbird"),
-    ( 002, "100 Years of Solitude"),
-    ( 003, "War and Peace");
+    ( 1, "To Kill a Mockingbird"),
+    ( 2, "100 Years of Solitude"),
+    ( 3, "War and Peace");
+
+SHOW DATABASES;
+SHOW TABLES;
+DESCRIBE fiction;
+SELECT * FROM fiction;
