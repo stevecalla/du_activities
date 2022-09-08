@@ -17,7 +17,7 @@ CREATE DATABASE books_db;
 SHOW DATABASES;
 
 -- Use inventory_db --
-USE books_db;
+-- USE books_db;
 
 -- See database in use --
 SELECT DATABASE();

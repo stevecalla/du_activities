@@ -1,3 +1,5 @@
+-- SOURCE seeds.sql
+
 INSERT INTO products (product_name, category_name)
 VALUES ("spinach", "produce"),
        ("peanut butter", "staples"),

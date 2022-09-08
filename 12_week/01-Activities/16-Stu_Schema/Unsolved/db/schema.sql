@@ -1,23 +1,28 @@
--- Write your schema here --
-DROP DATABASE IF EXISTS inventory_db;
-CREATE DATABASE inventory_db;
+-- SOURCE schema.sql
 
-USE inventory_db;
+-- Write your schema here --
+DROP DATABASE IF EXISTS grocery_db;
+CREATE DATABASE grocery_db;
+
+USE grocery_db;
 
 CREATE TABLE products (
-  id INT NOT NULL,
+  id INT NOT NULL AUTO_INCREMENT,
   product_name VARCHAR(30) NOT NULL,
   category_name VARCHAR(30) NOT NULL,
   price INT NOT NULL,
   in_stock BOOLEAN NOT NULL,
-  date_added DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL
+  date_added DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
+  PRIMARY KEY (id)
 );
 
 CREATE TABLE categories (
-  id INT NOT NULL,
+  id INT NOT NULL AUTO_INCREMENT,
   category_name VARCHAR(30) NOT NULL,
-  date_updated DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL
+  date_added DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
+  PRIMARY KEY (id)
 );
+
 
 SHOW DATABASES;
 SHOW TABLES;

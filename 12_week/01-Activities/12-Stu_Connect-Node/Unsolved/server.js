@@ -1,4 +1,5 @@
 const express = require('express');
+const { get } = require('http');
 const mysql = require('mysql2');
 
 const PORT = process.env.PORT || 3001;
@@ -11,15 +12,21 @@ const db = mysql.createConnection(
   {
     host: 'localhost',
     user: 'root',
-    password: '',
+    password: 'denverdenver',
     database: 'classlist_db'
   },
   console.log(`Connected to the classlist_db database.`)
 );
 
-db.query('SELECT * FROM students', function (err, results) {
-  console.log(results);
-});
+// db.query('SELECT * FROM students', function (err, results) {
+//   console.log(results);
+// });
+
+app.get('/api/students', (req, res) => {
+  db.query('SELECT * FROM students', function (err, results) {
+    res.json(results);
+  });
+})
 
 app.use((req, res) => {
   res.status(404).end();

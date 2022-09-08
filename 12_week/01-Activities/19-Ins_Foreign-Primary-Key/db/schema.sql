@@ -11,7 +11,7 @@ CREATE TABLE instructors (
 );
 
 CREATE TABLE courses (
-  id INT,
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   course_title VARCHAR(30) NOT NULL,
   instructor_id INT,
   order_details TEXT,
@@ -19,3 +19,8 @@ CREATE TABLE courses (
   REFERENCES instructors(id)
   ON DELETE SET NULL
 );
+
+SHOW DATABASE;
+SHOW TABLES;
+DESCRIBE courses;
+DESCRIBE instructors;
