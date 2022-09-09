@@ -13,3 +13,9 @@ VALUES ("Intro to JavaScript", 1),
        ("Game Design", 1 ),
        ("Cloud Development", 1);
        
+SHOW tables;
+DESCRIBE department;
+DESCRIBE course_names;
+SELECT * FROM departments;
+SELECT * FROM course_names;
+SOURCE query.sql;

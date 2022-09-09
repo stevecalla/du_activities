@@ -13,3 +13,6 @@ VALUES ("The Great Gatsby", 1, true, 11),
        ("Catch-12", 5, true, 18),
        ("Hamlet", 5, true, 14);
        
+SHOW tables;
+DESCRIBE tables;
+SELECT * FROM favorite_books;

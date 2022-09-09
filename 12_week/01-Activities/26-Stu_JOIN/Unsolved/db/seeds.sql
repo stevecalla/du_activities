@@ -13,3 +13,10 @@ VALUES ("The Great Gatsby", true, 1),
        ("Crime and Punishment", true, 2),
        ("Moby Dick", true, 4),
        ("Decameron", false, 1);
+
+SHOW tables;
+DESCRIBE book_prices;
+DESCRIBE favorite_books;
+-- SELECT * FROM book_prices;
+-- SELECT * FROM favorite_books;
+SOURCE query.sql;

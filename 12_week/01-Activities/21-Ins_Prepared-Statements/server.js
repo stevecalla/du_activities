@@ -31,6 +31,8 @@ db.query(`DELETE FROM course_names WHERE id = ?`, 3, (err, result) => {
   console.log(result);
 });
 
+db.query(`DELETE FROM course_names WHERE id = ?`, 3);
+
 // Query database
 db.query('SELECT * FROM course_names', function (err, results) {
   console.log(results);
