@@ -8,7 +8,10 @@ const sequelize = new Sequelize(
   {
     host: 'localhost',
     dialect: 'mysql',
-    port: 3306
+    port: 3306,
+    define: {
+      freezeTableName: true
+    } //section: added to prevent auto plurilization can also add in the table (e.g. Book.js) so this is applied for a specific table not globally
   }
 );
 

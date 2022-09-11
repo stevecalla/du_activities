@@ -1,5 +1,6 @@
 const express = require('express');
 const sequelize = require('./config/connection');
+// require('dotenv').config(); //section
 
 // Import model to sync table with database
 const Book = require('./models/Book');

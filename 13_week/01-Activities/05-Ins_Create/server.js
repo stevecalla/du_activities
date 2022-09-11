@@ -10,7 +10,9 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(routes);
 
+app.get('/', (req, res) => res.send('hello'));
+
 // Force false so data doesn't get dropped on every sync
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening'));
+  app.listen(PORT, () => console.log(`Now listening on ${PORT}`));
 });
