@@ -34,7 +34,6 @@ test('Checks for short passwords', async () => {
   const newUser2 = User.build(user2);
 
   await expect(newUser1.validate()).rejects.toThrow(
-    'Validation len on password failed'
   );
   await expect(newUser2.validate()).resolves.not.toThrow();
 });

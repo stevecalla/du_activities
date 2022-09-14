@@ -35,7 +35,7 @@ Book.init(
     timestamps: false,
     underscored: true,
     modelName: 'book'
-    // freezeTableName: true //section: added to prevent auto plurilization can also add in the connection.js so this is applied globally for all tables
+    // freezeTableName: true //section: added to prevent auto plurilization; can also add in the connection.js so this is applied globally for all tables
   }
 );
 

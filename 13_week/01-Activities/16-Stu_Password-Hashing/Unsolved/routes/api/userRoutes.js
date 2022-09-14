@@ -8,6 +8,8 @@ router.post('/login', async (req, res) => {
     const userData = await User.findOne({ where: { email: req.body.email } });
     if (!userData) {
       res.status(404).json({ message: 'Login failed. Please try again!' });
+
+      
       return;
     }
 

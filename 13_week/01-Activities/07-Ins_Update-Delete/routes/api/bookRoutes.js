@@ -20,6 +20,7 @@ router.get('/:isbn', (req, res) => {
       },
     }
   ).then((bookData) => {
+    // console.log(bookData);
     res.json(bookData);
   });
 });

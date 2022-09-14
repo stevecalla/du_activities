@@ -34,7 +34,26 @@ User.init(
   },
   {
     // TODO: Add hooks here
+    // When adding hooks via the init() method, they go below
+    // todo: It's done when User.init() includes Hooks to hash the user's password before it is created.
+    hooks: {
+      // Use the beforeCreate hook to work with data before a new instance is created
+      beforeCreate: async (newUserData) => {
 
+        newUser.password = await bcrypt.hash(newUserData.password, 10);
+        return newUserData;
+      },
+      // todo: It's done when User.init() includes Hooks to hash the user's password before it is updated, only if a password is provided in the payload.
+      beforeUpdate: async (updatedUserData, options) => {
+        if (options.fields.includes("password")) {
+          updatedUserData.password = await bcrypt.hash(
+            updatedUserData.password, 
+            10
+          );
+        }
+        return updatedUserData;
+      },
+    },
     sequelize,
     timestamps: false,
     freezeTableName: true,

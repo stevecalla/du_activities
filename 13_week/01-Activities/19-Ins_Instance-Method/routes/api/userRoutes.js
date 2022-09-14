@@ -32,6 +32,7 @@ router.post('/', async (req, res) => {
 
 // Route for instance method hasPets - a user can visit this url to check if a user at the specified id has pets
 
+// section: path = localhost:3001/api/users/1/hasPets
 router.get('/:id/hasPets', async (req, res) => {
   try {
     // First, we find a user using their primary key (provided by params)
