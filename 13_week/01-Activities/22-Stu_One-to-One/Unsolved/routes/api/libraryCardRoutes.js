@@ -39,6 +39,7 @@ router.post('/', async (req, res) => {
     const locationData = await LibraryCard.create({
       // TODO: Add a comment describing where the value of `req.body.reader_id` comes from
       reader_id: req.body.reader_id,
+      //section the post call should include a json object body with the reader id
     });
     res.status(200).json(locationData);
   } catch (err) {

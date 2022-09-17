@@ -42,5 +42,24 @@ router.get('/', async (req, res) => {
 });
 
 // TODO: Add a route called `/dish/:num` below
+// section
+router.get('/dish/:num', async (req, res) => {
+
+  console.log(dishes);
+
+  let num = parseInt(req.params.num);
+  num < 0 || num > dishes.length ? num = 0 : num = num;
+
+  let name = dishes[num].dish_name;
+  let desc = `Description: ${dishes[num].description}`;
+  let test = dishes.map(element => element.dish_name);
+  // let test2 = dishes.map(element => ({dish: element.dish_name}));
+
+  console.log(test);
+  // console.log(test2);
+
+  res.render('dish', {dishes: test, dish_name: name, description: desc});
+
+});
 
 module.exports = router;

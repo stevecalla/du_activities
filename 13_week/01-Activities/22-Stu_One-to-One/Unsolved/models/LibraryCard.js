@@ -17,6 +17,7 @@ LibraryCard.init(
       defaultValue: UUIDV4,
     },
     // TODO: Add a comment describing what this column holds information for 
+    //section adds reader id as foreign key to link the reader to library cardlib
     reader_id: {
       type: DataTypes.INTEGER,
       references: {
