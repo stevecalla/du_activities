@@ -46,6 +46,9 @@ router.get('/gallery/:id', async (req, res) => {
     });
 
     const gallery = dbGalleryData.get({ plain: true });
+    
+    console.log('gallery = ', gallery);
+
     res.render('gallery', { gallery });
   } catch (err) {
     console.log(err);
@@ -59,6 +62,8 @@ router.get('/painting/:id', async (req, res) => {
     const dbPaintingData = await Painting.findByPk(req.params.id);
 
     const painting = dbPaintingData.get({ plain: true });
+
+    console.log(painting);
 
     res.render('painting', { painting });
   } catch (err) {
