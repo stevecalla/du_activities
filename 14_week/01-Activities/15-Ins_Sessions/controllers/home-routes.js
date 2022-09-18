@@ -18,18 +18,20 @@ router.get('/', async (req, res) => {
     );
 
     req.session.save(() => {
-      // We set up a session variable to count the number of times we visit the homepage
+      console.log(req.session)
+      // section: We set up a session variable to count the number of times we visit the homepage
       if (req.session.countVisit) {
-        // If the 'countVisit' session variable already exists, increment it by 1
+        // section If the 'countVisit' session variable already exists, increment it by 1
         req.session.countVisit++;
       } else {
-        // If the 'countVisit' session variable doesn't exist, set it to 1
+        // section If the 'countVisit' session variable doesn't exist, set it to 1
         req.session.countVisit = 1;
       }
 
+      console.log(req.session)
       res.render('homepage', {
         galleries,
-        // We send over the current 'countVisit' session variable to be rendered
+        // section We send over the current 'countVisit' session variable to be rendered
         countVisit: req.session.countVisit,
       });
     });
@@ -61,8 +63,8 @@ router.get('/gallery/:id', async (req, res) => {
     const gallery = dbGalleryData.get({ plain: true });
     res.render('gallery', {
       gallery,
-      // We are not incrementing the 'countVisit' session variable here
-      // but simply sending over the current 'countVisit' session variable to be rendered
+      // section We are not incrementing the 'countVisit' session variable here
+      // section but simply sending over the current 'countVisit' session variable to be rendered
       countVisit: req.session.countVisit,
     });
   } catch (err) {
@@ -80,8 +82,8 @@ router.get('/painting/:id', async (req, res) => {
 
     res.render('painting', {
       painting,
-      // We are not incrementing the 'countVisit' session variable here
-      // but simply sending over the current 'countVisit' session variable to be rendered
+      // section We are not incrementing the 'countVisit' session variable here
+      // section but simply sending over the current 'countVisit' session variable to be rendered
       countVisit: req.session.countVisit,
     });
   } catch (err) {

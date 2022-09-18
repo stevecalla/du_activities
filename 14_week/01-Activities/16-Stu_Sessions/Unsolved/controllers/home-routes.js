@@ -17,9 +17,24 @@ router.get('/', async (req, res) => {
       gallery.get({ plain: true })
     );
     // TODO: Send over the 'loggedIn' session variable to the 'homepage' template
-    res.render('homepage', {
-      galleries,
-    });
+
+    // section added
+    // req.session.save(() => { //section
+    //   console.log('get a = ', req.session)
+    //   if (req.session.loggedIn) {
+    //     req.session.loggedIn;
+    //   } else {
+    //     req.session.loggedIn = false;
+    //   }
+
+      console.log('get b = ', req.session);
+
+      res.render('homepage', {
+        galleries,
+        loggedIn: req.session.loggedIn,
+      });
+    // });
+
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -47,7 +62,10 @@ router.get('/gallery/:id', async (req, res) => {
 
     const gallery = dbGalleryData.get({ plain: true });
     // TODO: Send over the 'loggedIn' session variable to the 'gallery' template
-    res.render('gallery', { gallery });
+    res.render('gallery', { 
+      gallery,
+      loggedIn: req.session.loggedIn, //section
+    });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -61,7 +79,10 @@ router.get('/painting/:id', async (req, res) => {
 
     const painting = dbPaintingData.get({ plain: true });
     // TODO: Send over the 'loggedIn' session variable to the 'homepage' template
-    res.render('painting', { painting });
+    res.render('painting', { 
+      painting,
+      loggedIn: req.session.loggedIn, //section
+    });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -71,7 +92,14 @@ router.get('/painting/:id', async (req, res) => {
 // Login route
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect to the homepage
+  console.log('login a =', req.session, req.session.loggedIn); //section
+
+  // req.session.loggedIn = true;
+
   if (req.session.loggedIn) {
+    req.session.loggedIn = true; //section
+    console.log('login b = ', req.session, req.session.loggedIn);//section
+
     res.redirect('/');
     return;
   }
