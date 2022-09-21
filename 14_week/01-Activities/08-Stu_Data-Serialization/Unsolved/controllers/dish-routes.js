@@ -6,15 +6,17 @@ router.get('/', async (req, res) => {
   // TODO: Build out this route so that it serializes all of the dish objects that it receives. See the 'get' route below for a hint.
   // res.send('hello');
 
-  const allDishes = await Dish.findAll();
+  const allDishes = await Dish.findAll().catch((err) => {
+    res.json(err);
+  }); //section could add a catch here
 
   console.log(allDishes); //section non serialized data
 
   const dishes = allDishes.map((dish) => dish.get({ plain: true }));
 
-  console.log(dishes); //section serialized ata
+  console.log(dishes); //section serialized data
 
-  res.render('all', {dishes} );  
+  res.render('all', { dishes } );  
 });
 
 // route to get one dish

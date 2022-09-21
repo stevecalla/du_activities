@@ -1,10 +1,13 @@
 // TODO: Add a comment indicating how this file fits into the MVC framework (is it a Model, a View, or a Controller?) and what it is responsible for handling.
+// section: this is the controller... routing the the view (handlebars)
 
 const router = require('express').Router();
 
 // TODO: Add a comment describing the purpose of the get route
+//section to added the all view to the main handlebars
 router.get('/', async (req, res) => {
 //TODO: Add a comment describing the purpose of the render method
+  // section this is rendering the all.handlebars file in the main handlebar file
   res.render('all');
 });
 

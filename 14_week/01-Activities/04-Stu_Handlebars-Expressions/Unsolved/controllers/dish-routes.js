@@ -58,7 +58,9 @@ router.get('/dish/:num', async (req, res) => {
   console.log(test);
   // console.log(test2);
 
-  res.render('dish', {dishes: test, dish_name: name, description: desc});
+  res.render('dish', {dish_name: name, description: desc});
+  //section experimenting with each in dish.handlebars
+  // res.render('dish', {dishes: test, dish_name: name, description: desc});
 
 });
 
