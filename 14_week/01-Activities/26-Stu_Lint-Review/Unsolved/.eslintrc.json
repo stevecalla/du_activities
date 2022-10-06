@@ -5,10 +5,14 @@
     "commonjs": true,
     "node": true,
     "es6": true
-    // TODO: Add option to support ** operators
+    // Add support for ES7 features like ** operators
+    ,"prefer-exponentiation-operator": true // or
+    ,"es2017": true
+
   },
   "rules": {
-    // TODO: Add rule to disallow setting variables to undefined
+    // Don't allow assigning variables to undefined   
+    "no-undef-init": "error",
     "no-duplicate-case": "error",
     "no-empty": "error",
     "no-extra-semi": "error",
