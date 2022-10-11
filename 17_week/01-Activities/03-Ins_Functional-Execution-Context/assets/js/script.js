@@ -14,7 +14,7 @@ const objB = {
   myFuncB: function () {
     console.log('globalThis', globalThis);
     console.log('myFuncBThis', this);
-    // In the FEC, a new reference to this is created
+    // In the FEC (function execution context), a new reference to this is created
     console.log("myFuncB: ", globalThis === this);
   }
 };
