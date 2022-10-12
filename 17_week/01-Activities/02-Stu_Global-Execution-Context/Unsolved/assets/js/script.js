@@ -5,7 +5,7 @@ const carNoise = 'Honk';
 // section global exection context
 const goFast = speed => {
   // 4) When is speed assigned a value? Where is this value stored?
-  // section after goFast is stored in global exectuion context speed is declared/created and 80 is assigned
+  // section after goFast is stored in global exectuion context speed is declared/created and 80 is assigned; speed is in the functional execution context
   
   // 5) Where is makeNoise stored?
   // section make noise is stored in the function execution context
@@ -19,7 +19,7 @@ const goFast = speed => {
 }
 
 // 3) What happens in the following statement?
-// section a confirmation box is presented. if yes then goFast is executed passing in 80
+// section a confirmation box is presented/rendered in the browser. if yes then goFast is executed passing in 80
 if(confirm("Do you want to go fast?")) {
   goFast(80);
 }

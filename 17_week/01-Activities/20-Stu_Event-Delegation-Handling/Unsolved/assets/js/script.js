@@ -1,4 +1,5 @@
 const buttons = document.getElementsByTagName('button');
+console.log(buttons)
 
 const clickHandler = function () {
 // TODO: Add a comment describing the purpose of this variable.
@@ -17,4 +18,5 @@ const clickHandler = function () {
 // TODO: Add a comment describing the purpose of this loop.
 for (let i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener('click', clickHandler());
+  // console.log(buttons, i)
 }

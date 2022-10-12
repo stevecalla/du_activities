@@ -27,5 +27,5 @@ myBank.displayFunds();
 console.dir(myBank);
 
 // By console logging the outer function's variable we can see that the variables are not able to be accessed.
-console.log(checking);
+console.log('checking = ', checking);
 console.log(savings);

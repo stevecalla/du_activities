@@ -9,14 +9,16 @@ function binarySearch(array, element) {
     let mid = Math.floor((start + end) / 2);
 
     if (array[mid] === element) {
-      return;
+      // return;
+      return true; //section added true
     } else if (array[mid] < element) {
       start = mid + 1;
     } else {
       end = mid - 1;
     }
   }
-  return;
+  // return;
+  return false; //section added false
 }
 
 console.log(binarySearch(arr, 7));
