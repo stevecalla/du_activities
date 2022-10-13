@@ -22,9 +22,8 @@ function outer() {
 }
 
 outer();
-
 // console
-// Yes, I'm listening
-// I like turtles
-// Are you listening?
-// Hello world
+// 1) Yes, I'm listening
+// 2) I like turtles
+// 3) Are you listening?
+// 4) Hello world
