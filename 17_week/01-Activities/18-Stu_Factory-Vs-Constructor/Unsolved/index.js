@@ -4,6 +4,7 @@ class Lesson {
     this.title = 'Module 17 - Computer Science';
     this.description = 'CS for JS';
   }
+  
   information() {
     console.log('Title: ', this.title, 'Description: ', this.description);
   }
@@ -12,6 +13,7 @@ class Lesson {
 const csForJS = new Lesson();
 csForJS.information();
 
+//section
 const information2 = (state) => ({
   information: () => console.log('Title: ', state.title, 'Description: ', state.description)
 });

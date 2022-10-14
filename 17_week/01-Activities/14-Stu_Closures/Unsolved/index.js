@@ -6,6 +6,7 @@ function counter() {
     increment: function () {
       // console.log(count)
       return count++;
+      // or return ++count; with count = 0;
     }
   }
   
