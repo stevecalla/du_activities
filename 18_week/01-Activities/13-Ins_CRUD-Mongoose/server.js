@@ -12,7 +12,9 @@ app.use(express.json());
 // Creates a new department
 app.post('/new-department/:department', (req, res) => {
   const newDepartment = new Department({ name: req.params.department });
+
   newDepartment.save();
+  
   if (newDepartment) {
     res.status(201).json(newDepartment);
   } else {

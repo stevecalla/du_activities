@@ -59,9 +59,21 @@ const data = [
 
 app.use(express.json());
 
+
+app.get('/read', (req, res) => {
+  db.collection('authorList')
+    .find()
+    // .find({ "information.price": 10 })
+    .toArray((err, results) => {
+      if (err) throw err;
+      res.send(results);
+    });
+});
+
 app.get('/price-less-than-10', (req, res) => {
   db.collection('authorList')
-    .find({ data: { $lt: 10 } })
+    // .find({ price: { $lt: 10 } })
+    .find({ "information.price" : { $lt: 10 }  })
     .toArray((err, results) => {
       if (err) throw err;
       res.send(results);
@@ -70,7 +82,8 @@ app.get('/price-less-than-10', (req, res) => {
 
 app.get('/featured-authors', (req, res) => {
   db.collection('authorList')
-    .find({ featured: true })
+    // .find({ featured: true })
+    .find({ "authors.featured": true })
     .toArray((err, results) => {
       if (err) throw err;
       res.send(results);

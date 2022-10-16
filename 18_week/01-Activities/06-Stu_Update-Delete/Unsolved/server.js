@@ -44,3 +44,32 @@ app.get('/read', (req, res) => {
 });
 
 // TODO: Add Delete route that uses a filter to delete a single document by id
+app.delete('/delete/', (req, res) => {
+  console.log('-----------');
+  console.log('-----------', req.body, req.body._id);
+  console.log('-----------', { "_id" : ObjectId("req.body._id") });
+  console.log('-----------', { "_id" : req.body._id });
+  console.log('-----------', { "_id" : ObjectId(req.body._id) });
+  db.collection('bookCollection').deleteOne(
+    { "_id" : ObjectId(req.body._id) },
+    (err, results) => {
+      if (err) throw err;
+      res.json(results);
+    }
+  );
+});
+// db.bookCollection.deleteOne({ "_id" : ObjectId("6349df6f7462cd3536d39f7b")} );
+
+app.put('/update/', (req, res) => {
+  db.collection('bookCollection').updateOne(
+    { "_id" : ObjectId(req.body._id) },
+    { $set: 
+      { "title" : req.body.title, "author": req.body.author }
+    },
+    (err, results) => {
+      if (err) throw err;
+      res.json(results);
+    }
+    );
+  });
+  // db.bookCollection.updateOne({"item": "banana"}, {$set: { "item" : "apple"}});

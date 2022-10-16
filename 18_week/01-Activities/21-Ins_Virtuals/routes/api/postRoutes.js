@@ -5,6 +5,7 @@ const {
   createPost,
 } = require('../../controllers/postController');
 
+// /api/posts
 router.route('/').get(getPosts).post(createPost);
 
 router.route('/:postId').get(getSinglePost);

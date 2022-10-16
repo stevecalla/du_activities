@@ -29,6 +29,12 @@ Item.create(
     price: 1,
     inStock: true,
   },
+  {
+    item: 'apple',
+    stockCount: 3000,
+    price: 1,
+    inStock: true,
+  },
   (err) => (err ? handleError(err) : console.log('Created new document'))
 );
 

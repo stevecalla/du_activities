@@ -26,20 +26,29 @@ Book.create(
     price: 10,
     inStock: true,
   },
+  {
+    title: 'test',
+  },
   (err) => (err ? handleError(err) : console.log('Created new document'))
 );
 
 // TODO: Add a comment describing the difference between this instance being created
 // and the instance that was created above
 Book.create(
-  { title: 'Oh the Places You Will Go!', author: 'Dr. Seuss' },
+  { 
+    title: 'Oh the Places You Will Go!', 
+    author: 'Dr. Seuss' 
+  },
   (err) => (err ? handleError(err) : console.log('Created new document'))
 );
 
 // TODO: Add a comment describing the difference between this instance being created
 // and the instance that was created above
-Book.create({ title: 'Harold and the Purple Crayon' }, (err) =>
-  err ? handleError(err) : console.log('Created new document')
+Book.create(
+  {
+    title: 'Harold and the Purple Crayon' 
+  }, 
+  (err) => err ? handleError(err) : console.log('Created new document')
 );
 
 module.exports = Book;
