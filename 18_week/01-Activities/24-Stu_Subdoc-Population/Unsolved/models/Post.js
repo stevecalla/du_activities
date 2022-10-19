@@ -3,22 +3,22 @@ const { Schema, model } = require('mongoose');
 // Schema to create Post model
 const postSchema = new Schema(
   {
-    // published: {
-    //   type: Boolean,
-    //   default: false,
-    // },
-    // createdAt: {
-    //   type: Date,
-    //   default: Date.now,
-    // },
-    // tags: [
-    //   {
-    //     // type: 'Tag',
-    //     // type: Schema.Types.ObjectId,
-    //     type: [Schema.tagSchema],
-    //     ref: 'Tag',
-    //   },
-    // ],
+    published: {
+      type: Boolean,
+      default: false,
+    },
+    createdAt: {
+      type: Date,
+      default: Date.now,
+    },
+    tags: [
+      {
+        // type: 'Tag',
+        // type: Schema.Types.ObjectId,
+        type: [Schema.tagSchema],
+        ref: 'Tag',
+      },
+    ],
     text: {
       type: String,
       minLength: 15,

@@ -12,7 +12,15 @@ const fibonacci = (position, process) => {
 };
 
 // TODO: What will this return?
-console.log(fibonacci(14));
+console.log(fibonacci(5));
+
+//                        fib 5
+//      return (fib(4)      +         fib(3))
+// return (fib (3) + fib(2) +  ret(fib(2) + fib (1)))
+// return(fib(2) + fib(1)) + return(fib(1) + fib(0)) + return(fib(1) + fib(0)) + 1)
+// return(fib(1) + fib(0)) + 1 + 1 + 0                + 1 + 0 + 1
+// return (1 + 0 + 1 + 1 + - + 1 + - + 1)
+// 5
 
 //9
 //9-1=8 & 9-2=7 = 15

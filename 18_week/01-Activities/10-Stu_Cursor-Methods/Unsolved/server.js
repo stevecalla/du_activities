@@ -49,7 +49,7 @@ app.get('/read', (req, res) => {
   db.collection('numberList')
     .find()
     .sort({ number: -1 })
-    .skip(5)
+    .skip(5) //sort order before skip matters to skip the five largest
     .limit(5)
     .toArray((err, results) => {
       if (err) throw err;
