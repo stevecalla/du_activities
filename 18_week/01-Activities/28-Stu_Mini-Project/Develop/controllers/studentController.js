@@ -9,11 +9,10 @@ const headCount = async () =>
       '$count': 'first'
     }
   ])
-  .then((numberOfStudents) => numberOfStudents);
+  // .then((numberOfStudents) => numberOfStudents); //section don't need?
 
 // Execute the aggregate method on the Student model and calculate the overall grade by using the $avg operator
 const grade = async (studentId) => 
-
   Student.aggregate
   ([
     // TODO: Ensure we include only the student who can match the given ObjectId using the $match operator
@@ -40,8 +39,8 @@ module.exports = {
     Student.find()
       .then(async (students) => {
         const studentObj = {
-          students,
           headCount: await headCount(), //section
+          students,
         };
         return res.json(studentObj);
       })
@@ -59,8 +58,8 @@ module.exports = {
         !student
           ? res.status(404).json({ message: 'No student with that ID' })
           : res.json({
-              student,
-              grade: await grade(req.params.studentId), //section
+            grade: await grade(req.params.studentId), //section
+            student,
             })
       )
       .catch((err) => {
