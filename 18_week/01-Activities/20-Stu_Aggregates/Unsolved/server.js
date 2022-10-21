@@ -27,12 +27,13 @@ app.get('/sum-price', (req, res) => {
       {
         $group: {
           _id: null,
+          count: { $sum: 1 },
           sum_price: { $sum: '$price' },
           avg_price: { $avg: '$price' },
           max_price: { $max: '$price' },
           min_price: { $min: '$price' },
         },
-      },
+      }
     ],
     (err, result) => {
       if (err) {
