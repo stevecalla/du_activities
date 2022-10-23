@@ -1,9 +1,7 @@
 // TODO: Implement the MiniCssExtractPlugin
-
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const path = require('path');
-
 const MiniCssExtractPlugin = require("mini-css-extract-plugin"); //section
+const path = require('path');
 
 module.exports = {
   mode: 'development',
@@ -12,18 +10,22 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
-
+  
+  // plugins: [new MiniCssExtractPlugin()],
   plugins: [
     new HtmlWebpackPlugin({
       template: './index.html',
       title: 'Webpack Plugin',
     }),
+    new MiniCssExtractPlugin() //section
   ],
   module: {
     rules: [
       {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
+        use: [MiniCssExtractPlugin.loader, "css-loader"], //section
+        // test: /\.css$/i,
+        // use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -38,17 +40,6 @@ module.exports = {
             presets: ['@babel/preset-env'],
           },
         },
-      },
-    ],
-  },
-
-  //section
-  plugins: [new MiniCssExtractPlugin()],
-  module: {
-    rules: [
-      {
-        test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
     ],
   },

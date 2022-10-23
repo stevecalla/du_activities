@@ -10,10 +10,16 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
   // TODO: Add devServer object
+  // section
+  devServer: {
+    // The `hot` option is to use the webpack-dev-server in combination with the hot module replacement API.
+    // hot: 'only',
+    hot: true,
+  },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './index.html',
       title: 'Webpack Plugin',
+      template: './index.html',
     }),
     new MiniCssExtractPlugin(),
   ],
