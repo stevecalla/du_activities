@@ -16,7 +16,7 @@
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css/style.css */ \"./src/css/style.css\");\n/* harmony import */ var _js_header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/header */ \"./src/js/header.js\");\n/* harmony import */ var _js_header__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_js_header__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _images_three_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./images/three.png */ \"./src/images/three.png\");\n/* harmony import */ var _images_four_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./images/four.png */ \"./src/images/four.png\");\n\n\n\n\ndocument.getElementById(\"three\").src = _images_three_png__WEBPACK_IMPORTED_MODULE_2__;\ndocument.getElementById(\"four\").src = _images_four_png__WEBPACK_IMPORTED_MODULE_3__; // Register service worker\n// Check that service workers are supported\n\nif ('serviceWorker' in navigator) {\n  // Use the window load event to keep the page load performant\n  window.addEventListener('load', function () {\n    navigator.serviceWorker.register('/service-worker.js');\n  });\n}\n\n//# sourceURL=webpack://11-ins_webpack-hmr/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css/style.css */ \"./src/css/style.css\");\n/* harmony import */ var _js_header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/header */ \"./src/js/header.js\");\n/* harmony import */ var _js_header__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_js_header__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _images_three_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./images/three.png */ \"./src/images/three.png\");\n/* harmony import */ var _images_four_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./images/four.png */ \"./src/images/four.png\");\n\n\n\n\ndocument.getElementById(\"three\").src = _images_three_png__WEBPACK_IMPORTED_MODULE_2__;\ndocument.getElementById(\"four\").src = _images_four_png__WEBPACK_IMPORTED_MODULE_3__;\n\n// Register service worker\n// Check that service workers are supported\nif ('serviceWorker' in navigator) {\n  // Use the window load event to keep the page load performant\n  window.addEventListener('load', function () {\n    navigator.serviceWorker.register('/service-worker.js');\n  });\n}\n\n//# sourceURL=webpack://19-ins_inject-manifest-client/./src/index.js?");
 
 /***/ }),
 
@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css
   \**************************/
 /***/ (() => {
 
-eval("// Grab the target element\nvar headerEl = document.querySelector('.header');\nheaderEl.innerHTML = '<h1>Cache Image</h1>';\n\n//# sourceURL=webpack://11-ins_webpack-hmr/./src/js/header.js?");
+eval("// Grab the target element\nvar headerEl = document.querySelector('.header');\nheaderEl.innerHTML = '<h1>Cache Image</h1>';\n\n//# sourceURL=webpack://19-ins_inject-manifest-client/./src/js/header.js?");
 
 /***/ }),
 
@@ -37,7 +37,7 @@ eval("// Grab the target element\nvar headerEl = document.querySelector('.header
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://11-ins_webpack-hmr/./src/css/style.css?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://19-ins_inject-manifest-client/./src/css/style.css?");
 
 /***/ }),
 
@@ -48,7 +48,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"80551ea7ee802057b7d8.png\";\n\n//# sourceURL=webpack://11-ins_webpack-hmr/./src/images/four.png?");
+eval("module.exports = __webpack_require__.p + \"80551ea7ee802057b7d8.png\";\n\n//# sourceURL=webpack://19-ins_inject-manifest-client/./src/images/four.png?");
 
 /***/ }),
 
@@ -59,7 +59,7 @@ eval("module.exports = __webpack_require__.p + \"80551ea7ee802057b7d8.png\";\n\n
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"fc083abf258238e3b7f5.png\";\n\n//# sourceURL=webpack://11-ins_webpack-hmr/./src/images/three.png?");
+eval("module.exports = __webpack_require__.p + \"fc083abf258238e3b7f5.png\";\n\n//# sourceURL=webpack://19-ins_inject-manifest-client/./src/images/three.png?");
 
 /***/ })
 

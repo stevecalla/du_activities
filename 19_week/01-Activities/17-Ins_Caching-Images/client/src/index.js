@@ -4,6 +4,7 @@ import header from './js/header';
 
 import Three from '../src/images/three.png';
 import Four from '../src/images/four.png';
+import ThreeCopy from '../src/images/three_copy.png';
 
 document.getElementById("three").src= Three;
 document.getElementById("four").src= Four;
