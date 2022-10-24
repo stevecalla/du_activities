@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "scripts": {git gi
+  "scripts": {
     "start:dev": "concurrently \"cd client && npm run build\" \"cd server && npm run server\" ",
     "start": "npm run build && cd server && node server.js",
     "server": "cd server node server.js --ignore client",
@@ -18,8 +18,8 @@
     "concurrently": "^5.2.0"
   },
   "comments": {
-    "comment-start:dev": "TODO: Add your comment about start:dev script inside these quotes",
-    "comment-concurrently": "TODO: Add your comment about concurrently inside these quotes"
+    "comment-start:dev": "TODO: Add your comment about start:dev script inside these quotes// section from the client directory run build and from the server directory run server",
+    "comment-concurrently": "TODO: Add your comment about concurrently inside these quotes//section concurrently allows multiple commands on a single npm start... in this case to run the server and client npm commands in the package.json"
   }
 }
 
