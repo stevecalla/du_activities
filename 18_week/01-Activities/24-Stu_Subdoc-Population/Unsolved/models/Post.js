@@ -15,8 +15,9 @@ const postSchema = new Schema(
       {
         // type: 'Tag',
         // type: Schema.Types.ObjectId,
-        type: [Schema.tagSchema],
-        ref: 'Tag',
+        // type: [Schema.tagSchema],
+        type: Schema.Types.ObjectId,
+        ref: 'tag',
       },
     ],
     text: {

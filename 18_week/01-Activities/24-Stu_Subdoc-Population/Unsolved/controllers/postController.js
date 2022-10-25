@@ -3,7 +3,8 @@ const { Post } = require('../models');
 module.exports = {
   getPosts(req, res) {
     Post.find()
-      .populate('tags', "color") //section
+      // .populate('tags', "color") //section
+      .populate('tags')
       .exec()
       .then((posts) => res.json(posts))
       .catch((err) => {
