@@ -13,8 +13,8 @@ module.exports = {
   // section
   devServer: {
     // The `hot` option is to use the webpack-dev-server in combination with the hot module replacement API.
-    // hot: 'only',
-    hot: true,
+    hot: 'only',
+    // hot: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
