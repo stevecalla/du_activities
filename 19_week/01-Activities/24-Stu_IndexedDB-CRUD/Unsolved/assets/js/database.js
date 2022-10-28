@@ -13,7 +13,7 @@ const initdb = async () =>
   });
 
 export const postDb = async (content) => {
-  console.log('Post to the ase');
+  console.log('Post to the database');
   const todosDb = await openDB('todos', 1);
   const tx = todosDb.transaction('todos', 'readwrite');
   const store = tx.objectStore('todos');
