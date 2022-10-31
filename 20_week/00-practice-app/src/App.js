@@ -14,6 +14,12 @@ import users from './users'; //activity 9
 import ListTen from './components/ListTen'; //activity 10
 import groceries from './groceries'; //activity 10
 import Greeting from "./components/Greeting"; //activity 11
+import GreetingTwelve from "./components/GreetingTwelve"; //activity 12
+import Counter from './components/Counter'; // activity 13
+import CounterFourteen from './components/CounterFourteen'; // activity 14
+import Form from "./components/Form"; //activity 15
+import './style.css'; //activity 15
+import FormSixteen from "./components/FormSixteen"; //activity 16
 
 const message = 'Invalid user id or password';
 const alertType = "danger"
@@ -23,6 +29,11 @@ const alertType = "danger"
 export default function App() {
   return (
     <div>
+      <FormSixteen />
+      <Form />
+      <CounterFourteen />
+      <Counter />
+      <GreetingTwelve />
       <Greeting />
       <ListTen groceries={groceries} />
       <Nav />
