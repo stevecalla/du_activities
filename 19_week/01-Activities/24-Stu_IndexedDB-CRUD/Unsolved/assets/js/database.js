@@ -49,7 +49,7 @@ export const getOneDb = async (id) => {
 export const deleteDb = async (id) => {
   console.log('DELETE from the database', id);
   const todosDb = await openDB('todos', 1);
-  // const tx = todosDb.transaction('todos', 'readonly'); //section needed write access
+  // const tx = todosDb.transaction('todos', 'readonly'); //section needed "readwrite" access priv
   const tx = todosDb.transaction('todos', 'readwrite');
   const store = tx.objectStore('todos');
   const request = store.delete(id);
@@ -62,7 +62,7 @@ export const deleteDb = async (id) => {
 export const putDb = async (id, content) => {
   console.log('PUT to the database');
   const todosDb = await openDB('todos', 1);
-  // const tx = todosDb.transaction('todo', 'readwrite'); //section
+  // const tx = todosDb.transaction('todo', 'readwrite'); //section "todo" spelled incorrectly
   const tx = todosDb.transaction('todos', 'readwrite');
   const store = tx.objectStore('todos');
   const request = store.put({ id: id, todo: content });

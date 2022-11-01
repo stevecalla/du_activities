@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import ResultList from './ResultList';
 
 // Import our search method
-import search from '../utils/API';
+import search from './utils/API';
 
 const SearchResultContainer = () => {
   // Declare a new state variable, "results"

@@ -10,8 +10,8 @@ function App() {
       <Header />
       <Navbar />
       <Card />
-      <Card />
-      <Card />
+      {/* <Card /> */}
+      {/* <Card /> */}
     </div>
   );
 }

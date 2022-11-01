@@ -18,6 +18,7 @@ window.deleteItem = (e) => {
 };
 
 window.editList = async (e) => {
+  console.log('edit', e)
   let id = parseInt(e.parentElement.id);
   
   console.log(id);
