@@ -1,0 +1,17 @@
+.header {
+  background: #b71775;
+  height: 200px;
+  /* section */
+  height: 23vh;
+  background: red;
+}
+
+.header h1 {
+  margin: 0;
+  padding-top: 75px;
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+  /* section */
+  font-size: 100px;
+}
