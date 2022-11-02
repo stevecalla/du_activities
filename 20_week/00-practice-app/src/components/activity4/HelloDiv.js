@@ -8,7 +8,8 @@ function HelloDiv() {
   let name = 'Litte Red';
   return  (
     <div>
-      <h1>Hello! My name is {name}. Activity 4</h1>
+      Activity 4
+      <h1>Hello! My name is {name}.</h1>
       <hr />
     </div>
   )

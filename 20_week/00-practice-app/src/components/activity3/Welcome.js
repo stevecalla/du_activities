@@ -5,7 +5,8 @@ export default function Welcome() {
   // We return all the JSX inside a parent element with a className of "container".
   return (
     <div className="container">
-      <h1>Hello students! ACTIVITY 3</h1>
+       ACTIVITY 3
+      <h1>Hello students!</h1>
       <p>Today we will be learning about the following:</p>
       <ul className="parent">
         <li>React</li>

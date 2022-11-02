@@ -2,14 +2,14 @@
 import React from 'react';
 // We import our Welcome component from our components folder so that we can eventually return it.
 // import Hello from './components/activity1/Hello'; //1
-import HelloReact from './components/activity2/HelloReact'; //2
+// import HelloReact from './components/activity2/HelloReact'; //2
 // import Welcome from './components/activity3/Welcome'; //3
 // import HelloDiv from './components/activity4/HelloDiv'; //4
 // import JSXVariables from './components/activity5/JSXVariables'; //5
 // import JSXVariablesv6 from './components/activity6/JSXVariablesv6'; //6
-// import Alert from './components/activity7/Alert'; //7
-// const message = 'Invalid user id or password'; //7
-// const alertType = "danger" //7
+import Alert from './components/activity7/Alert'; //7
+const message = 'Invalid user id or password'; //7
+const alertType = "danger" //7
 // import Display from './components/activity8/Display'; //8
 // import List from './components/activity9/List'; //9
 // import Nav from './components/activity9/Nav'; //9
@@ -58,7 +58,6 @@ export default function App() {
         <hr />
         <Welcome name={name} topic={topic} />
       </div> */}
-
       {/* 24 */}
       {/* <PortfolioContainer /> */}
       {/* 23 */}
@@ -101,7 +100,7 @@ export default function App() {
       {/* 8 */}
       {/* <Display /> */}
       {/* 7 */}
-      {/* <Alert type={alertType} message={message} /> */}
+      <Alert type={alertType} message={message} />
       {/* 6 */}
       {/* <JSXVariablesv6 /> */}
       {/* 5 */}
@@ -111,7 +110,7 @@ export default function App() {
       {/* 3 */}
       {/* <Welcome /> */}
       {/* 2 */}
-      <HelloReact />
+      {/* <HelloReact /> */}
       {/* 1 */}
       {/* <Hello /> */}
     </div>
