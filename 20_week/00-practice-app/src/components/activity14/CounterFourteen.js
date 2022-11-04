@@ -16,6 +16,11 @@ export default function Counter() {
     setCount((count - 1));
   };
 
+  // TODO: MAKE ONE FUNCTION TO HANDLE BOTH INCREMENT / DECREMENT
+  const handleCount = (x) => {
+    setCount(count + x)
+  }
+
   return (
     <div className="card text-center">
       Activity 14
@@ -25,6 +30,9 @@ export default function Counter() {
         count={count}
         handleIncrement={handleIncrement}
         handleDecrement={handleDecrement}
+
+        handleIncrement2={() => handleCount(10)}
+        handleDecrement2={() => handleCount(-100)}
       />
     </div>
   );

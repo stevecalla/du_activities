@@ -11,6 +11,9 @@ function Greeting() {
   // const [ group, setGroup ] = useState(["John", "Grace", "Jared"]); //setgroup throws error
   const [ group ] = useState(["John", "Grace", "Jared"]);
 
+  let test = group.map(element => element);
+  let test2 = group.map((student, index) => <li key={index}>{student}</li>);
+
   return (
     <div className="card text-center">
       Activity 12
@@ -24,6 +27,14 @@ function Greeting() {
           <li>Student 1</li>
           <li>Student 2</li>
           <li>Student 3</li>
+
+          {/* {group.map(element => element)} */}
+          {/* { test } */}
+
+          {group.map((student, index) => <li key={index}>{student}</li>)}
+          
+          {test2}
+
           <li>{ group[0] }</li>
           <li>{ group[1] }</li>
           <li>{ group[2] }</li>

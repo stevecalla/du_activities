@@ -11,7 +11,6 @@ function Form() {
   const [userName, setUserName] = useState('');
   // TODO: Create a password variable and a function "setPassword" using useState
   //section
-  // const [password, setPassword] = useState('');
   const [password, setPassword] = useState('');
 
   const [errorMessage, setErrorMessage] = useState('');

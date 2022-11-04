@@ -7,9 +7,9 @@ import React from 'react';
 // import HelloDiv from './components/activity4/HelloDiv'; //4
 // import JSXVariables from './components/activity5/JSXVariables'; //5
 // import JSXVariablesv6 from './components/activity6/JSXVariablesv6'; //6
-import Alert from './components/activity7/Alert'; //7
-const message = 'Invalid user id or password'; //7
-const alertType = "danger" //7
+// import Alert from './components/activity7/Alert'; //7
+// const message = 'Invalid user id or password'; //7
+// const alertType = "danger" //7
 // import Display from './components/activity8/Display'; //8
 // import List from './components/activity9/List'; //9
 // import Nav from './components/activity9/Nav'; //9
@@ -22,8 +22,8 @@ const alertType = "danger" //7
 // import CounterFourteen from './components/activity14/CounterFourteen'; // 14
 // import Form from "./components/activity15/Form"; //15
 // import FormSixteen from "./components/activity16/FormSixteen"; //16
-// import DisplaySeventeen from './components/activity17/DisplaySeventeen'; //17
-// import Thermostat from './components/activity18/Thermostat'; //18
+import DisplaySeventeen from './components/activity17/DisplaySeventeen'; //17
+import Thermostat from './components/activity18/Thermostat'; //18
 // import SearchResultContainer from './components/activity19/SearchResultContainer'; //19
 // import OmdbContainer from './components/activity20/OmdbContainer'; //20
 // import Navbar from './components/activity21/components/Navbar'; //21
@@ -39,10 +39,11 @@ const alertType = "danger" //7
 // In this example, we have a parent `div` that references the Welcome component that we imported at the top.
 
 export default function App() {
+  
   // const [loggedIn, setLoggedIn] = useState(false); //23
-
   // const [name, setName] = useState(''); //25
   // const [topic, setTopic] = useState(''); //25
+
   return (
     <div>
       {/* 25 */}
@@ -77,9 +78,9 @@ export default function App() {
       {/* 19 */}
       {/* <SearchResultContainer /> */}
       {/* 18 */}
-      {/* <Thermostat /> */}
+      <Thermostat />
       {/* 17 */}
-      {/* <DisplaySeventeen /> */}
+      <DisplaySeventeen />
       {/* 16 */}
       {/* <FormSixteen /> */}
       {/* 15 */}
@@ -100,7 +101,7 @@ export default function App() {
       {/* 8 */}
       {/* <Display /> */}
       {/* 7 */}
-      <Alert type={alertType} message={message} />
+      {/* <Alert type={alertType} message={message} /> */}
       {/* 6 */}
       {/* <JSXVariablesv6 /> */}
       {/* 5 */}

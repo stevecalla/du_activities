@@ -9,14 +9,21 @@ function CardBody(props) {
       <button
         type="button"
         className="btn btn-primary"
-        onClick={props.handleIncrement}
+        // onClick={props.handleIncrement}
+        // onClick={props.handleIncrement2}
+        onClick={event => {
+          props.handleIncrement();
+          props.handleIncrement2();
+        }}
       >
         Increment
       </button>{' '}
       <button
         type="button"
         className="btn btn-danger"
-        onClick={props.handleDecrement}
+        // onClick={props.handleDecrement}
+        // onClick={props.handleDecrement2}
+        onClick={props.handleDecrement2}
       >
         Decrement
       </button>
