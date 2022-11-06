@@ -7,18 +7,22 @@ function BucketList() {
 
   // Function to add a bucket list item
   const addBucketItem = (item) => {
-
-    // TODO: Write logic to add the new bucket item to the bucket state variable
-    
+    console.log(item);
+    // TODO:Write logic to add the new bucket item to the bucket state variable
+    setBucket([...bucket, item]);
   };
 
   // Function to mark bucket list item as complete
   const completeBucketItem = (id) => {
     // If the ID passed to this function matches the ID of the item that was clicked, mark it as complete
     let updatedBucket = bucket.map((item) => {
-      
-      // TODO: Write logic that marks an item as complete or incomplete when invoked
-
+      // TODO:Write logic that marks an item as complete or incomplete when invoked
+      if (item.id === id) {
+        item.completeBucketItem = "completed";
+      } else {
+        item.completeBucketItem = "incomplete";
+      }
+      return;
     });
 
     setBucket(updatedBucket);
