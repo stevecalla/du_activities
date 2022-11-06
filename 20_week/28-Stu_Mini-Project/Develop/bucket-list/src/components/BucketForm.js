@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 function BucketForm(props) {
   const [input, setInput] = useState('');
   let [eagerness, setEagerness] = useState('');
+  //section to prevent empty item from being added
+  let [isDisabled, setDisabled] = useState(true);
 
   // TODO: Use this array in the return statement below
   const eagernessLevel = ['high', 'medium', 'low']
@@ -22,11 +24,17 @@ function BucketForm(props) {
 
     setInput('');
     setEagerness('');
+    setDisabled(true);
   };
 
   const handleChange = (e) => {
     console.log(e, e.target.value)
     setInput(e.target.value);
+    //section to prevent empty item from being added
+    let trimValue = e.target.value.trim();
+    console.log('length = ', e.target.value.length);
+    console.log('length = ', trimValue.length);
+    if (trimValue.length > 0) {setDisabled(false)};
   };
 
   // First we check to see if "edit" prop exists. If not, we render the normal form
@@ -43,7 +51,8 @@ function BucketForm(props) {
           onChange={handleChange}
         ></input>
         <div className="dropdown">
-          <button className={`dropbtn ${eagerness}`}>
+          {/* section added disabled to prevent adding an item */}
+          <button className={`dropbtn ${eagerness}`} disabled={true}>
             {eagerness || 'Priority'}
           </button>
           <div className="dropdown-content">
@@ -53,7 +62,8 @@ function BucketForm(props) {
             <p onClick={() => setEagerness(eagernessLevel[2])}>Take it or leave it</p>
           </div>
         </div>
-        <button className="bucket-button">Add bucket list item</button>
+        {/* section set disabled to prevent empty item from being added*/}
+        <button className="bucket-button" disabled={isDisabled}>Add bucket list item</button>
       </form>
     </div>
   ) : (
@@ -79,7 +89,7 @@ function BucketForm(props) {
             <p onClick={() => setEagerness(eagernessLevel[2])}>Take it or leave it</p>
           </div>
         </div>
-        <button className="bucket-button">Update</button>
+        <button className="bucket-button" >Update</button>
       </form>
     </div>
   );
