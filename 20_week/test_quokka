@@ -3,3 +3,20 @@ const quokka = { isAwesome: true };
 console.log(quokka);
 
 console
+
+//type rcf... to use the es7+ React/reduc/react native components
+//25:21
+
+rcf
+import React from 'react'
+import PropTypes from 'prop-types'
+
+const test_quokka = props => {
+  return (
+    <div>test_quokka</div>
+  )
+}
+
+test_quokka.propTypes = {}
+
+export default test_quokka
