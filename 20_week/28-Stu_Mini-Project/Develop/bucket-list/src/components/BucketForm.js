@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 
 function BucketForm(props) {
 
-  console.log('bucket form props = ', props)
+  // console.log('bucket form props = ', props)
 
   const [input, setInput] = useState('');
   let [eagerness, setEagerness] = useState('');
   //section to prevent empty item from being added
+  let [completed, setCompleted ] = useState(false);
   let [isDisabled, setDisabled] = useState(true);
 
   // TODO: Use this array in the return statement below
@@ -34,16 +35,18 @@ function BucketForm(props) {
       id: id,
       text: input,
       eagerness: eagerness,
+      completed: false,
     });
 
     setInput('');
     setEagerness('');
     //section reset disabled to true
+    setCompleted(false);
     setDisabled(true);
   };
 
   const handleChange = (e) => {
-    console.log(e, e.target.value)
+    // console.log(e, e.target.value)
     setInput(e.target.value);
     //section to prevent empty item from being added
     let trimValue = e.target.value.trim();

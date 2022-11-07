@@ -35,10 +35,11 @@ function Bucket(props) {
     // TODO:Add a className of `bucket row complete ${item.eagerness}` for completed items, and `bucket-row ${item.eagerness}` for non-completed items
     // TODO:Add a key attribute set to the value of the index position
     // Hint: use a ternary operator
-    <div className={item.completed ? `bucket row complete ${item.eagerness}` :  `bucket-row ${item.eagerness}`} key={index}>
+    <div key={index} className={item.completed === true ? `bucket-row complete ${item.eagerness}` : `bucket-row ${item.eagerness}`}>
 
       {/* // TODO:Add an onClick event that invokes the `completeBucketItem` method passing the item id as a argument */}
-      <div key={index} onClick={item.completeBucketItem}>
+      {/* <div key={index} onClick={() => console.log(item.id, item.completed)}> */}
+      <div key={index} onClick={() => props.completeBucketItem(item.id)}>
           {/* TODO:Add the item text here */}
           {item.text}
       </div>

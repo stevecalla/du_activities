@@ -15,23 +15,24 @@ function BucketList() {
 
   // Function to mark bucket list item as complete
   const completeBucketItem = (id) => {
+    console.log(id)
     // If the ID passed to this function matches the ID of the item that was clicked, mark it as complete
-    let updatedBucket = bucket.map((item) => {
-      // TODO: Write logic that marks an item as complete or incomplete when invoked
-      // if (item.id === id) {
-      //   item.completeBucketItem = "completed";
-      // } else {
-      //   item.completeBucketItem = "incomplete";
-      // }
-      return true;
-    });
+    // TODO: Write logic that marks an item as complete or incomplete when invoked
+    let updatedBucket = bucket.map((item) => item.id === id ? (
+      {
+        id: item.id,
+        text: item.text,
+        eagerness: item.eagerness,
+        completed: true
+      }
+     ) : item );
 
     setBucket(updatedBucket);
   };
 
   // Function to remove bucket list item and update state
   const removeBucketItem = (id) => {
-    // TODO: Write logic that will return an array of items that don't contain the ID passed to this function
+    // TODO:Write logic that will return an array of items that don't contain the ID passed to this function
     // section
     let updatedBucket = bucket.filter(element => element.id !== id);
     //todo: update the bucket state variable
@@ -52,7 +53,6 @@ function BucketList() {
     // We use the "prev" argument provided with the useState hook to map through our list of items
     // We then check to see if the item ID matches the id of the item that was clicked and if so, we set it to a new value
     setBucket((prev) => {
-    //   console.log({prev}, prev[0].id, itemId, {newValue});
       prev.map((item) => (item.id === itemId ? (
         item.text = newValue.text,
         item.eagerness = newValue.eagerness
