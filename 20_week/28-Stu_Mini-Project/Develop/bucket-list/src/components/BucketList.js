@@ -8,7 +8,8 @@ function BucketList() {
   // Function to add a bucket list item
   const addBucketItem = (item) => {
     console.log(item);
-    // TODO:Write logic to add the new bucket item to the bucket state variable
+    // TODOWrite logic to add the new bucket item to the bucket state variable
+    // section
     setBucket([...bucket, item]);
   };
 
@@ -16,13 +17,13 @@ function BucketList() {
   const completeBucketItem = (id) => {
     // If the ID passed to this function matches the ID of the item that was clicked, mark it as complete
     let updatedBucket = bucket.map((item) => {
-      // TODO:Write logic that marks an item as complete or incomplete when invoked
-      if (item.id === id) {
-        item.completeBucketItem = "completed";
-      } else {
-        item.completeBucketItem = "incomplete";
-      }
-      return;
+      // TODO: Write logic that marks an item as complete or incomplete when invoked
+      // if (item.id === id) {
+      //   item.completeBucketItem = "completed";
+      // } else {
+      //   item.completeBucketItem = "incomplete";
+      // }
+      return true;
     });
 
     setBucket(updatedBucket);
@@ -31,23 +32,36 @@ function BucketList() {
   // Function to remove bucket list item and update state
   const removeBucketItem = (id) => {
     // TODO: Write logic that will return an array of items that don't contain the ID passed to this function
-
-
-    // TODO: Update the bucket state variable
+    // section
+    let updatedBucket = bucket.filter(element => element.id !== id);
+    //todo: update the bucket state variable
+    // section
+    setBucket(updatedBucket);
   };
 
   // Function to edit the bucket list item
   const editBucketItem = (itemId, newValue) => {
-    // Make sure that the value isn't empty
-    if (!newValue.text) {
-      return;
-    }
 
+    console.log(itemId, { newValue }); 
+    console.log(newValue.text);
+
+    // Make sure that the value isn't empty
+    // if (!newValue.text) {
+    //   return;
+    // }
     // We use the "prev" argument provided with the useState hook to map through our list of items
     // We then check to see if the item ID matches the id of the item that was clicked and if so, we set it to a new value
-    setBucket((prev) =>
-      prev.map((item) => (item.id === itemId ? newValue : item))
-    );
+    setBucket((prev) => {
+    //   console.log({prev}, prev[0].id, itemId, {newValue});
+      prev.map((item) => (item.id === itemId ? (
+        item.text = newValue.text,
+        item.eagerness = newValue.eagerness
+       ) : item))
+       return bucket;
+    });
+
+    console.log('updated bucket = ', bucket);
+
   };
 
   return (

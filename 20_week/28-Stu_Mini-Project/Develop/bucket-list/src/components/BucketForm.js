@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 
 function BucketForm(props) {
+
+  console.log('bucket form props = ', props)
+
   const [input, setInput] = useState('');
   let [eagerness, setEagerness] = useState('');
   //section to prevent empty item from being added
   let [isDisabled, setDisabled] = useState(true);
 
   // TODO: Use this array in the return statement below
+  // section
   const eagernessLevel = ['high', 'medium', 'low']
 
   const handleSubmit = (e) => {
@@ -16,14 +20,25 @@ function BucketForm(props) {
       eagerness = 'low';
     }
 
+    let id = 0; 
+
+    if (props.edit) {
+      id = props.edit.id;
+    } else {
+      id = Math.random(Math.floor() * 1000);
+    }
+
     props.onSubmit({
-      id: Math.random(Math.floor() * 1000),
+      // id: Math.random(Math.floor() * 1000),
+      // id: 1 || Math.random(Math.floor() * 1000),
+      id: id,
       text: input,
       eagerness: eagerness,
     });
 
     setInput('');
     setEagerness('');
+    //section reset disabled to true
     setDisabled(true);
   };
 
@@ -32,8 +47,6 @@ function BucketForm(props) {
     setInput(e.target.value);
     //section to prevent empty item from being added
     let trimValue = e.target.value.trim();
-    console.log('length = ', e.target.value.length);
-    console.log('length = ', trimValue.length);
     if (trimValue.length > 0) {setDisabled(false)};
   };
 
@@ -57,6 +70,7 @@ function BucketForm(props) {
           </button>
           <div className="dropdown-content">
             {/* TODO:Add an onClick event that will set the corresponding eagerness level from the `eagernessLevel` array */}
+            {/* //section */}
             <p onClick={() => setEagerness(eagernessLevel[0])}>Must do</p>
             <p onClick={() => setEagerness(eagernessLevel[1])}>Want to do</p>
             <p onClick={() => setEagerness(eagernessLevel[2])}>Take it or leave it</p>
@@ -70,6 +84,8 @@ function BucketForm(props) {
     <div>
       <h3>Update entry: {props.edit.value}</h3>
       <form className="bucket-form" onSubmit={handleSubmit}>
+      {/* <form className="bucket-form" onSubmit={() => console.log(props)}> */}
+      {/* <form className="bucket-form" onSubmit={props.onSubmit}> */}
         <input
           type="text"
           placeholder={props.edit.value}
@@ -84,6 +100,7 @@ function BucketForm(props) {
           </button>
           <div className="dropdown-content">
             {/* TODO:Add an onClick event that will set the corresponding eagerness level from the `eagernessLevel` array */}
+            {/* //section */}
             <p onClick={() => setEagerness(eagernessLevel[0])}>Must do</p>
             <p onClick={() => setEagerness(eagernessLevel[1])}>Want to do</p>
             <p onClick={() => setEagerness(eagernessLevel[2])}>Take it or leave it</p>
