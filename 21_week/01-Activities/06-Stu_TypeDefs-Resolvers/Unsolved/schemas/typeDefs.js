@@ -24,7 +24,6 @@ const typeDefs = gql`
     officeHours: String
     officeLocation: String
     studentScore: Float
-    //section
     classes: [Class]
   }
 
