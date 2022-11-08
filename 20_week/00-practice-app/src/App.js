@@ -1,5 +1,3 @@
-// import React, { useState } from 'react';
-import React from 'react';
 // We import our Welcome component from our components folder so that we can eventually return it.
 // import Hello from './components/activity1/Hello'; //1
 // import HelloReact from './components/activity2/HelloReact'; //2
@@ -22,32 +20,77 @@ import React from 'react';
 // import CounterFourteen from './components/activity14/CounterFourteen'; // 14
 // import Form from "./components/activity15/Form"; //15
 // import FormSixteen from "./components/activity16/FormSixteen"; //16
-import DisplaySeventeen from './components/activity17/DisplaySeventeen'; //17
-import Thermostat from './components/activity18/Thermostat'; //18
+// import DisplaySeventeen from './components/activity17/DisplaySeventeen'; //17
+// import Thermostat from './components/activity18/Thermostat'; //18
 // import SearchResultContainer from './components/activity19/SearchResultContainer'; //19
 // import OmdbContainer from './components/activity20/OmdbContainer'; //20
+
 // import Navbar from './components/activity21/components/Navbar'; //21
 // import Header from './components/activity21/components/Header'; //21
 // import Card from './components/activity21/components/Card'; //21
+
 // import Navbar from './components/activity22/components/Navbar'; //22
 // import Header from './components/activity22/components/Header'; //22
 // import Section from './components/activity22/components/Section'; //22
+
 // import Welcome from './components/activity23/Welcome'; //23
+
 // import PortfolioContainer from "./components/activity24/components/PortfolioContainer"; //24
-// import Welcome from './components/activity25/Welcome'; //25
+
+import Welcome from './components/activity25/Welcome'; //25
 // Inside our App component, we have a return method that contains all the JSX we want to render to the screen.
 // In this example, we have a parent `div` that references the Welcome component that we imported at the top.
+
+import SearchBar from './components/activity26/components/SearchBar'; //26
+import IssueList from './components/activity26/components/IssueList'; //26
+
+// import React from 'react';
+// import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react'; //26
 
 export default function App() {
   
   // const [loggedIn, setLoggedIn] = useState(false); //23
-  // const [name, setName] = useState(''); //25
-  // const [topic, setTopic] = useState(''); //25
+
+  const [name, setName] = useState(''); //25
+  const [topic, setTopic] = useState(''); //25
+
+    // We declare a state variable that is an array called `issues` and a function to update it.
+    const [issues, setIssues] = useState([]); //26
+
+    // When the page loads, set the document title to something specific to this app.
+    // This only runs once because of our empty dependency array.
+    useEffect(() => {
+      document.title = 'GitHub issues';
+    }, []); //26
+  
+    // Helper function that performs an API request and sets the `issues` array to a list of issues from GitHub
+    const getRepoIssues = (repo) => {
+      let issuesURL = `https://api.github.com/repos/${repo}/issues?direction=asc`;
+      console.log('issuesURL', issuesURL);
+      fetch(issuesURL)
+        .then((res) => res.json())
+        .then((response) => setIssues(response));
+    }; //26
 
   return (
     <div>
+      {/* 26 */}
+      {/* Here we pass our getRepoIssues function as a prop to SearchBar */}
+      {/* ACTIVITY 26
+      <div className="ui container">
+        <SearchBar onFormSubmit={getRepoIssues} />
+        <div className="ui grid">
+          <div className="ui row">
+            <div className="eleven wide column">
+              <IssueList issues={issues} />
+            </div>
+          </div>
+        </div>
+      </div> */}
       {/* 25 */}
-      {/* <div className="container">
+      {/* ACTIVITY 25
+      <div className="container">
         <div>
           <span>Enter your name: </span>
           <input onChange={(e) => setName(e.target.value)} />
@@ -78,9 +121,9 @@ export default function App() {
       {/* 19 */}
       {/* <SearchResultContainer /> */}
       {/* 18 */}
-      <Thermostat />
+      {/* <Thermostat /> */}
       {/* 17 */}
-      <DisplaySeventeen />
+      {/* <DisplaySeventeen /> */}
       {/* 16 */}
       {/* <FormSixteen /> */}
       {/* 15 */}
@@ -114,6 +157,7 @@ export default function App() {
       {/* <HelloReact /> */}
       {/* 1 */}
       {/* <Hello /> */}
+
     </div>
   );
 }
