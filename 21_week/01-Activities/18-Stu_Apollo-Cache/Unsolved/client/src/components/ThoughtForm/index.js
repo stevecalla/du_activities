@@ -13,13 +13,15 @@ const ThoughtForm = () => {
 
   const [addThought, { error }] = useMutation(ADD_THOUGHT, {
     
-    update(cache, data, addThought) {
+    // update(cache, data, addThought) {
+    update(cache, { data: { addThought } }) { 
       try {
         const { thoughts } = cache.readQuery({ query: QUERY_THOUGHTS });
 
         cache.writeQuery({
           query: QUERY_THOUGHTS,
-          data: { thoughts: [addThought, ...thoughts] },
+          // data: { thoughts: [addThought, ...thoughts] },
+          data: { thoughts: [...thoughts, addThought] },
         });
       } catch (e) {
         console.error(e);
@@ -31,6 +33,7 @@ const ThoughtForm = () => {
     event.preventDefault();
 
     try {
+      // const { data } = await addThought({
       const { data } = await addThought({
         variables: { ...formState },
       });
@@ -39,6 +42,7 @@ const ThoughtForm = () => {
         thoughtText: '',
         thoughtAuthor: '',
       });
+      // window.location.reload();
     } catch (err) {
       console.error(err);
     }
