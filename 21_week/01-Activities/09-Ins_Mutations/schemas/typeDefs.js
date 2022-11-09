@@ -37,6 +37,7 @@ const typeDefs = gql`
   type Mutation {
     # Set the required fields for new schools
     addSchool(name: String!, location: String!, studentCount: Int!): School
+    deleteSchool(schoolId: ID!): School
   }
 `;
 

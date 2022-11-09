@@ -24,6 +24,9 @@ const resolvers = {
       // Create and return the new School object
       return await School.create({ name, location, studentCount });
     },
+    deleteSchool: async (parent, { schoolId }) => {
+      return School.findOneAndDelete({_id: schoolId });
+    },
   },
 };
 
