@@ -1,7 +1,7 @@
 import React from 'react';
+
 // TODO: Add code here to import necessary functionality
 import { useParams } from 'react-router-dom';
-
 import { useQuery } from '@apollo/client';
 
 import CommentList from '../components/CommentList';
