@@ -12,7 +12,7 @@ const ThoughtForm = () => {
   const [characterCount, setCharacterCount] = useState(0);
 
   const [addThought, { error }] = useMutation(ADD_THOUGHT, {
-    
+    // section
     // update(cache, data, addThought) {
     update(cache, { data: { addThought } }) { 
       try {
@@ -20,6 +20,7 @@ const ThoughtForm = () => {
 
         cache.writeQuery({
           query: QUERY_THOUGHTS,
+          // section
           // data: { thoughts: [addThought, ...thoughts] },
           data: { thoughts: [...thoughts, addThought] },
         });
