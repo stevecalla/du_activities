@@ -14,10 +14,12 @@ class AuthService {
     const decoded = decode(token);
     let newDate = Date.now();
 
+    //section
     console.log({token}, decoded, {newDate});
     console.log({ newDate }, new Date(newDate), newDate / 1000);
-
     if (decoded.exp < Date.now() / 1000) {
+    //section revised code
+    // if (decoded.exp < Date.now()) {
 
       localStorage.removeItem('id_token');
 
