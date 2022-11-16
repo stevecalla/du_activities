@@ -25,6 +25,11 @@ function App() {
                 element={<Home />} 
               />
               {/* TODO: Add code here that creates a route for displaying a single thought's comments */}
+              {/* section 14 */}
+              <Route
+                path="thoughts/:thoughtId"
+                element={<SingleThought />}
+              />
             </Routes>
           </div>
           <Footer />
