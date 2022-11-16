@@ -73,6 +73,7 @@ export default function StudentList() {
 
             <div className="add-student">
               <input
+                name={state.studentName}
                 value={state.studentName}
                 onChange={(e) =>
                   dispatch({ type: SET_STUDENT_NAME, payload: e.target.value })

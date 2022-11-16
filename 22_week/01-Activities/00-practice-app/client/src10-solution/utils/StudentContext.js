@@ -21,7 +21,6 @@ export const StudentProvider = ({ children }) => {
     },
   ];
 
-  // List of options for the student major
   const majors = [
     'Mathematics',
     'Computer Science',
@@ -32,13 +31,14 @@ export const StudentProvider = ({ children }) => {
     'Engineering',
   ];
 
-  // Initial state for the input fields/ dropdown menus
   const studentMajor = '';
   const studentName = '';
 
   // The value prop expects an initial state object
   return (
-    <StudentContext.Provider value={{ students, majors }}>
+    <StudentContext.Provider
+      value={{ students, majors, studentName, studentMajor }}
+    >
       {/* We render children in our component so that any descendent can access the value from the provider */}
       {children}
     </StudentContext.Provider>
