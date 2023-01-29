@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 function BucketForm(props) {
 
-  // console.log('bucket form props = ', props)
+  console.log('bucket form props = ', props)
 
   const [input, setInput] = useState('');
   let [eagerness, setEagerness] = useState('');

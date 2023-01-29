@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import BucketForm from './BucketForm';
 
 function Bucket(props) {
+  console.log('bucket props = ', props);
+  
   const [edit, setEdit] = useState({
     id: null,
     value: '',
