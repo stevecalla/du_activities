@@ -106,6 +106,12 @@ function resetButton() {
   box_container.style.backgroundColor = "orange";
   box_container.style.opacity = box_opacity;
   box_container.style.borderRadius = "0%";
+
+  growBtn.textContent = "Grow";
+  blueBtn.textContent = "Blue";
+  fadeBtn.textContent = "Fade";
+  circleBtn.textContent = "Circle";
+
 }
 
 // HELPING ANOTHER STUDENT
